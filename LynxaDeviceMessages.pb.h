@@ -16,28 +16,37 @@ typedef struct _CellTower {
     int32_t temp3;
 } CellTower;
 
+typedef struct _GpggaMessage_100 {
+    uint32_t timestamp;
+    float latitude;
+    uint32_t latitudeDirectionAscii;
+    float longitude;
+    uint32_t longitudeDirectionAscii;
+    uint32_t quality;
+    uint32_t numberOfSatellitesInUse;
+} GpggaMessage_100;
+
 typedef struct _LogMessage_101 {
     uint32_t timestamp;
     char logMessage[129];
 } LogMessage_101;
 
-typedef struct _NmeaRecord_100 {
-    uint32_t timestamp;
-    float latitude;
-    float longitude;
-} NmeaRecord_100;
-
 typedef struct _WifiStation {
-    pb_callback_t bssid;
+    pb_byte_t bssid[6];
     int32_t rssi;
 } WifiStation;
 
 typedef struct _GoogleLocationServices_102 {
     uint32_t timestamp;
     CellTower celltower;
-    pb_size_t wifistations_count;
-    WifiStation wifistations[10];
+    pb_size_t wifiStations_count;
+    WifiStation wifiStations[16];
 } GoogleLocationServices_102;
+
+typedef struct _WifiStationList_102 {
+    pb_size_t wifiStations_count;
+    WifiStation wifiStations[12];
+} WifiStationList_102;
 
 
 #ifdef __cplusplus
@@ -45,39 +54,50 @@ extern "C" {
 #endif
 
 /* Initializer values for message structs */
-#define NmeaRecord_100_init_default              {0, 0, 0}
+#define GpggaMessage_100_init_default            {0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_default              {0, ""}
-#define WifiStation_init_default                 {{{NULL}, NULL}, 0}
+#define WifiStation_init_default                 {{0}, 0}
+#define WifiStationList_102_init_default         {0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
 #define CellTower_init_default                   {0, 0, 0}
-#define GoogleLocationServices_102_init_default  {0, CellTower_init_default, 0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
-#define NmeaRecord_100_init_zero                 {0, 0, 0}
+#define GoogleLocationServices_102_init_default  {0, CellTower_init_default, 0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
+#define GpggaMessage_100_init_zero               {0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_zero                 {0, ""}
-#define WifiStation_init_zero                    {{{NULL}, NULL}, 0}
+#define WifiStation_init_zero                    {{0}, 0}
+#define WifiStationList_102_init_zero            {0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
 #define CellTower_init_zero                      {0, 0, 0}
-#define GoogleLocationServices_102_init_zero     {0, CellTower_init_zero, 0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
+#define GoogleLocationServices_102_init_zero     {0, CellTower_init_zero, 0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
 
 /* Field tags (for use in manual encoding/decoding) */
 #define CellTower_temp1_tag                      1
 #define CellTower_temp2_tag                      2
 #define CellTower_temp3_tag                      3
+#define GpggaMessage_100_timestamp_tag           1
+#define GpggaMessage_100_latitude_tag            2
+#define GpggaMessage_100_latitudeDirectionAscii_tag 3
+#define GpggaMessage_100_longitude_tag           4
+#define GpggaMessage_100_longitudeDirectionAscii_tag 5
+#define GpggaMessage_100_quality_tag             6
+#define GpggaMessage_100_numberOfSatellitesInUse_tag 7
 #define LogMessage_101_timestamp_tag             1
 #define LogMessage_101_logMessage_tag            2
-#define NmeaRecord_100_timestamp_tag             1
-#define NmeaRecord_100_latitude_tag              2
-#define NmeaRecord_100_longitude_tag             3
 #define WifiStation_bssid_tag                    1
 #define WifiStation_rssi_tag                     2
 #define GoogleLocationServices_102_timestamp_tag 1
 #define GoogleLocationServices_102_celltower_tag 2
-#define GoogleLocationServices_102_wifistations_tag 3
+#define GoogleLocationServices_102_wifiStations_tag 3
+#define WifiStationList_102_wifiStations_tag     1
 
 /* Struct field encoding specification for nanopb */
-#define NmeaRecord_100_FIELDLIST(X, a) \
+#define GpggaMessage_100_FIELDLIST(X, a) \
 X(a, STATIC,   REQUIRED, UINT32,   timestamp,         1) \
 X(a, STATIC,   REQUIRED, FLOAT,    latitude,          2) \
-X(a, STATIC,   REQUIRED, FLOAT,    longitude,         3)
-#define NmeaRecord_100_CALLBACK NULL
-#define NmeaRecord_100_DEFAULT NULL
+X(a, STATIC,   REQUIRED, UINT32,   latitudeDirectionAscii,   3) \
+X(a, STATIC,   REQUIRED, FLOAT,    longitude,         4) \
+X(a, STATIC,   REQUIRED, UINT32,   longitudeDirectionAscii,   5) \
+X(a, STATIC,   REQUIRED, UINT32,   quality,           6) \
+X(a, STATIC,   REQUIRED, UINT32,   numberOfSatellitesInUse,   7)
+#define GpggaMessage_100_CALLBACK NULL
+#define GpggaMessage_100_DEFAULT NULL
 
 #define LogMessage_101_FIELDLIST(X, a) \
 X(a, STATIC,   REQUIRED, UINT32,   timestamp,         1) \
@@ -86,10 +106,16 @@ X(a, STATIC,   REQUIRED, STRING,   logMessage,        2)
 #define LogMessage_101_DEFAULT NULL
 
 #define WifiStation_FIELDLIST(X, a) \
-X(a, CALLBACK, REQUIRED, BYTES,    bssid,             1) \
+X(a, STATIC,   REQUIRED, FIXED_LENGTH_BYTES, bssid,             1) \
 X(a, STATIC,   REQUIRED, INT32,    rssi,              2)
-#define WifiStation_CALLBACK pb_default_field_callback
+#define WifiStation_CALLBACK NULL
 #define WifiStation_DEFAULT NULL
+
+#define WifiStationList_102_FIELDLIST(X, a) \
+X(a, STATIC,   REPEATED, MESSAGE,  wifiStations,      1)
+#define WifiStationList_102_CALLBACK NULL
+#define WifiStationList_102_DEFAULT NULL
+#define WifiStationList_102_wifiStations_MSGTYPE WifiStation
 
 #define CellTower_FIELDLIST(X, a) \
 X(a, STATIC,   REQUIRED, INT32,    temp1,             1) \
@@ -101,31 +127,34 @@ X(a, STATIC,   REQUIRED, INT32,    temp3,             3)
 #define GoogleLocationServices_102_FIELDLIST(X, a) \
 X(a, STATIC,   REQUIRED, UINT32,   timestamp,         1) \
 X(a, STATIC,   REQUIRED, MESSAGE,  celltower,         2) \
-X(a, STATIC,   REPEATED, MESSAGE,  wifistations,      3)
+X(a, STATIC,   REPEATED, MESSAGE,  wifiStations,      3)
 #define GoogleLocationServices_102_CALLBACK NULL
 #define GoogleLocationServices_102_DEFAULT NULL
 #define GoogleLocationServices_102_celltower_MSGTYPE CellTower
-#define GoogleLocationServices_102_wifistations_MSGTYPE WifiStation
+#define GoogleLocationServices_102_wifiStations_MSGTYPE WifiStation
 
-extern const pb_msgdesc_t NmeaRecord_100_msg;
+extern const pb_msgdesc_t GpggaMessage_100_msg;
 extern const pb_msgdesc_t LogMessage_101_msg;
 extern const pb_msgdesc_t WifiStation_msg;
+extern const pb_msgdesc_t WifiStationList_102_msg;
 extern const pb_msgdesc_t CellTower_msg;
 extern const pb_msgdesc_t GoogleLocationServices_102_msg;
 
 /* Defines for backwards compatibility with code written before nanopb-0.4.0 */
-#define NmeaRecord_100_fields &NmeaRecord_100_msg
+#define GpggaMessage_100_fields &GpggaMessage_100_msg
 #define LogMessage_101_fields &LogMessage_101_msg
 #define WifiStation_fields &WifiStation_msg
+#define WifiStationList_102_fields &WifiStationList_102_msg
 #define CellTower_fields &CellTower_msg
 #define GoogleLocationServices_102_fields &GoogleLocationServices_102_msg
 
 /* Maximum encoded size of messages (where known) */
-#define NmeaRecord_100_size                      16
+#define GpggaMessage_100_size                    40
 #define LogMessage_101_size                      137
-/* WifiStation_size depends on runtime parameters */
+#define WifiStation_size                         19
+#define WifiStationList_102_size                 252
 #define CellTower_size                           33
-/* GoogleLocationServices_102_size depends on runtime parameters */
+#define GoogleLocationServices_102_size          377
 
 #ifdef __cplusplus
 } /* extern "C" */

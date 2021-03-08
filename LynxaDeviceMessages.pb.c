@@ -6,13 +6,16 @@
 #error Regenerate this file with the current version of nanopb generator.
 #endif
 
-PB_BIND(NmeaRecord_100, NmeaRecord_100, AUTO)
+PB_BIND(GpggaMessage_100, GpggaMessage_100, AUTO)
 
 
 PB_BIND(LogMessage_101, LogMessage_101, AUTO)
 
 
 PB_BIND(WifiStation, WifiStation, AUTO)
+
+
+PB_BIND(WifiStationList_102, WifiStationList_102, AUTO)
 
 
 PB_BIND(CellTower, CellTower, AUTO)

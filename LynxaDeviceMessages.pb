@@ -1,18 +1,25 @@
 
-š
-LynxaDeviceMessages.protonanopb.proto"h
-NmeaRecord_100
+¸
+LynxaDeviceMessages.protonanopb.proto"°
+GpggaMessage_100
 	timestamp (R	timestamp
-latitude (Rlatitude
-	longitude (R	longitude"V
+latitude (Rlatitude6
+latitudeDirectionAscii (RlatitudeDirectionAscii
+	longitude (R	longitude8
+longitudeDirectionAscii (RlongitudeDirectionAscii
+quality (Rquality8
+numberOfSatellitesInUse (RnumberOfSatellitesInUse"V
 LogMessage_101
 	timestamp (R	timestamp&
 
 logMessage (	B’?p€R
-logMessage">
-WifiStation
-bssid (B’?pRbssid
-rssi (Rrssi"M
+logMessage"C
+WifiStation 
+bssid (B
+’?’?xRbssid
+rssi (Rrssi"N
+WifiStationList_1027
+wifiStations (2.WifiStationB’?RwifiStations"M
 	CellTower
 temp1 (Rtemp1
 temp2 (Rtemp2
@@ -21,5 +28,4 @@ logMessage">
 	timestamp (R	timestamp(
 	celltower (2
 .CellTowerR	celltower7
-wifistations (2.WifiStationB’?
-Rwifistations
+wifiStations (2.WifiStationB’?RwifiStations
