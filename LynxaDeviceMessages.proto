@@ -4,13 +4,16 @@ import "nanopb.proto";
 
 message GnggaMessage_100
 {
-	required uint32 timestamp = 1; 
-	required float latitude = 2; 
-	required uint32 latitudeDirectionAscii = 3; 
-	required float longitude = 4; 
-	required uint32 longitudeDirectionAscii = 5; 
-	required uint32 quality = 6;
-	required uint32 numberOfSatellitesInUse = 7;
+	required uint32 timeHours = 1; 
+	required uint32 timeMinutes = 2; 
+	required uint32 timeSeconds = 3; 
+	required float latitudeMinutes = 4; 
+	required uint32 latitudeDegrees = 5; 
+	required uint32 latitudeCardinalAscii = 6; 
+	required float longitudeMinutes = 7; 
+	required uint32 longitudeDegrees = 8; 
+	required uint32 longitudeCardinalAscii = 9; 
+	required uint32 numberOfSatellitesInUse = 10;
 }
 
 message LogMessage_101

@@ -1,14 +1,18 @@
 
-¸
-LynxaDeviceMessages.protonanopb.proto"°
-GpggaMessage_100
-	timestamp (R	timestamp
-latitude (Rlatitude6
-latitudeDirectionAscii (RlatitudeDirectionAscii
-	longitude (R	longitude8
-longitudeDirectionAscii (RlongitudeDirectionAscii
-quality (Rquality8
-numberOfSatellitesInUse (RnumberOfSatellitesInUse"V
+Ð
+LynxaDeviceMessages.protonanopb.proto"È
+GnggaMessage_100
+	timeHours (R	timeHours 
+timeMinutes (RtimeMinutes 
+timeSeconds (RtimeSeconds(
+latitudeMinutes (RlatitudeMinutes(
+latitudeDegrees (RlatitudeDegrees4
+latitudeCardinalAscii (RlatitudeCardinalAscii*
+longitudeMinutes (RlongitudeMinutes*
+longitudeDegrees (RlongitudeDegrees6
+longitudeCardinalAscii	 (RlongitudeCardinalAscii8
+numberOfSatellitesInUse
+ (RnumberOfSatellitesInUse"V
 LogMessage_101
 	timestamp (R	timestamp&
 

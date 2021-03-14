@@ -22,40 +22,47 @@ public static partial class LynxaDeviceMessagesReflection {
   static LynxaDeviceMessagesReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8iSAoO",
-          "Tm1lYVJlY29yZF8xMDASEQoJdGltZXN0YW1wGAEgAigNEhAKCGxhdGl0dWRl",
-          "GAIgAigCEhEKCWxvbmdpdHVkZRgDIAIoAiI/Cg5Mb2dNZXNzYWdlXzEwMRIR",
-          "Cgl0aW1lc3RhbXAYASACKA0SGgoKbG9nTWVzc2FnZRgCIAIoCUIGkj8DcIAB",
-          "IjEKC1dpZmlTdGF0aW9uEhQKBWJzc2lkGAEgAigMQgWSPwJwBhIMCgRyc3Np",
-          "GAIgAigFIjgKCUNlbGxUb3dlchINCgV0ZW1wMRgBIAIoBRINCgV0ZW1wMhgC",
-          "IAIoBRINCgV0ZW1wMxgDIAIoBSJ5ChpHb29nbGVMb2NhdGlvblNlcnZpY2Vz",
-          "XzEwMhIRCgl0aW1lc3RhbXAYASACKA0SHQoJY2VsbHRvd2VyGAIgAigLMgou",
-          "Q2VsbFRvd2VyEikKDHdpZmlzdGF0aW9ucxgDIAMoCzIMLldpZmlTdGF0aW9u",
-          "QgWSPwIQCg=="));
+          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8ilQIK",
+          "EEduZ2dhTWVzc2FnZV8xMDASEQoJdGltZUhvdXJzGAEgAigNEhMKC3RpbWVN",
+          "aW51dGVzGAIgAigNEhMKC3RpbWVTZWNvbmRzGAMgAigNEhcKD2xhdGl0dWRl",
+          "TWludXRlcxgEIAIoAhIXCg9sYXRpdHVkZURlZ3JlZXMYBSACKA0SHQoVbGF0",
+          "aXR1ZGVDYXJkaW5hbEFzY2lpGAYgAigNEhgKEGxvbmdpdHVkZU1pbnV0ZXMY",
+          "ByACKAISGAoQbG9uZ2l0dWRlRGVncmVlcxgIIAIoDRIeChZsb25naXR1ZGVD",
+          "YXJkaW5hbEFzY2lpGAkgAigNEh8KF251bWJlck9mU2F0ZWxsaXRlc0luVXNl",
+          "GAogAigNIj8KDkxvZ01lc3NhZ2VfMTAxEhEKCXRpbWVzdGFtcBgBIAIoDRIa",
+          "Cgpsb2dNZXNzYWdlGAIgAigJQgaSPwNwgAEiNgoLV2lmaVN0YXRpb24SGQoF",
+          "YnNzaWQYASACKAxCCpI/AggGkj8CeAESDAoEcnNzaRgCIAIoBSJAChNXaWZp",
+          "U3RhdGlvbkxpc3RfMTAyEikKDHdpZmlTdGF0aW9ucxgBIAMoCzIMLldpZmlT",
+          "dGF0aW9uQgWSPwIQDCI4CglDZWxsVG93ZXISDQoFdGVtcDEYASACKAUSDQoF",
+          "dGVtcDIYAiACKAUSDQoFdGVtcDMYAyACKAUieQoaR29vZ2xlTG9jYXRpb25T",
+          "ZXJ2aWNlc18xMDISEQoJdGltZXN0YW1wGAEgAigNEh0KCWNlbGx0b3dlchgC",
+          "IAIoCzIKLkNlbGxUb3dlchIpCgx3aWZpU3RhdGlvbnMYAyADKAsyDC5XaWZp",
+          "U3RhdGlvbkIFkj8CEBA="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::NmeaRecord_100), global::NmeaRecord_100.Parser, new[]{ "Timestamp", "Latitude", "Longitude" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::GnggaMessage_100), global::GnggaMessage_100.Parser, new[]{ "TimeHours", "TimeMinutes", "TimeSeconds", "LatitudeMinutes", "LatitudeDegrees", "LatitudeCardinalAscii", "LongitudeMinutes", "LongitudeDegrees", "LongitudeCardinalAscii", "NumberOfSatellitesInUse" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::LogMessage_101), global::LogMessage_101.Parser, new[]{ "Timestamp", "LogMessage" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::WifiStation), global::WifiStation.Parser, new[]{ "Bssid", "Rssi" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::WifiStationList_102), global::WifiStationList_102.Parser, new[]{ "WifiStations" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::CellTower), global::CellTower.Parser, new[]{ "Temp1", "Temp2", "Temp3" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::GoogleLocationServices_102), global::GoogleLocationServices_102.Parser, new[]{ "Timestamp", "Celltower", "Wifistations" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::GoogleLocationServices_102), global::GoogleLocationServices_102.Parser, new[]{ "Timestamp", "Celltower", "WifiStations" }, null, null, null, null)
         }));
   }
   #endregion
 
 }
 #region Messages
-public sealed partial class NmeaRecord_100 : pb::IMessage<NmeaRecord_100>
+public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
 #endif
 {
-  private static readonly pb::MessageParser<NmeaRecord_100> _parser = new pb::MessageParser<NmeaRecord_100>(() => new NmeaRecord_100());
+  private static readonly pb::MessageParser<GnggaMessage_100> _parser = new pb::MessageParser<GnggaMessage_100>(() => new GnggaMessage_100());
   private pb::UnknownFieldSet _unknownFields;
   private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public static pb::MessageParser<NmeaRecord_100> Parser { get { return _parser; } }
+  public static pb::MessageParser<GnggaMessage_100> Parser { get { return _parser; } }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
@@ -68,123 +75,312 @@ public sealed partial class NmeaRecord_100 : pb::IMessage<NmeaRecord_100>
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public NmeaRecord_100() {
+  public GnggaMessage_100() {
     OnConstruction();
   }
 
   partial void OnConstruction();
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public NmeaRecord_100(NmeaRecord_100 other) : this() {
+  public GnggaMessage_100(GnggaMessage_100 other) : this() {
     _hasBits0 = other._hasBits0;
-    timestamp_ = other.timestamp_;
-    latitude_ = other.latitude_;
-    longitude_ = other.longitude_;
+    timeHours_ = other.timeHours_;
+    timeMinutes_ = other.timeMinutes_;
+    timeSeconds_ = other.timeSeconds_;
+    latitudeMinutes_ = other.latitudeMinutes_;
+    latitudeDegrees_ = other.latitudeDegrees_;
+    latitudeCardinalAscii_ = other.latitudeCardinalAscii_;
+    longitudeMinutes_ = other.longitudeMinutes_;
+    longitudeDegrees_ = other.longitudeDegrees_;
+    longitudeCardinalAscii_ = other.longitudeCardinalAscii_;
+    numberOfSatellitesInUse_ = other.numberOfSatellitesInUse_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public NmeaRecord_100 Clone() {
-    return new NmeaRecord_100(this);
+  public GnggaMessage_100 Clone() {
+    return new GnggaMessage_100(this);
   }
 
-  /// <summary>Field number for the "timestamp" field.</summary>
-  public const int TimestampFieldNumber = 1;
-  private readonly static uint TimestampDefaultValue = 0;
+  /// <summary>Field number for the "timeHours" field.</summary>
+  public const int TimeHoursFieldNumber = 1;
+  private readonly static uint TimeHoursDefaultValue = 0;
 
-  private uint timestamp_;
+  private uint timeHours_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public uint Timestamp {
-    get { if ((_hasBits0 & 1) != 0) { return timestamp_; } else { return TimestampDefaultValue; } }
+  public uint TimeHours {
+    get { if ((_hasBits0 & 1) != 0) { return timeHours_; } else { return TimeHoursDefaultValue; } }
     set {
       _hasBits0 |= 1;
-      timestamp_ = value;
+      timeHours_ = value;
     }
   }
-  /// <summary>Gets whether the "timestamp" field is set</summary>
+  /// <summary>Gets whether the "timeHours" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasTimestamp {
+  public bool HasTimeHours {
     get { return (_hasBits0 & 1) != 0; }
   }
-  /// <summary>Clears the value of the "timestamp" field</summary>
+  /// <summary>Clears the value of the "timeHours" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearTimestamp() {
+  public void ClearTimeHours() {
     _hasBits0 &= ~1;
   }
 
-  /// <summary>Field number for the "latitude" field.</summary>
-  public const int LatitudeFieldNumber = 2;
-  private readonly static float LatitudeDefaultValue = 0F;
+  /// <summary>Field number for the "timeMinutes" field.</summary>
+  public const int TimeMinutesFieldNumber = 2;
+  private readonly static uint TimeMinutesDefaultValue = 0;
 
-  private float latitude_;
+  private uint timeMinutes_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public float Latitude {
-    get { if ((_hasBits0 & 2) != 0) { return latitude_; } else { return LatitudeDefaultValue; } }
+  public uint TimeMinutes {
+    get { if ((_hasBits0 & 2) != 0) { return timeMinutes_; } else { return TimeMinutesDefaultValue; } }
     set {
       _hasBits0 |= 2;
-      latitude_ = value;
+      timeMinutes_ = value;
     }
   }
-  /// <summary>Gets whether the "latitude" field is set</summary>
+  /// <summary>Gets whether the "timeMinutes" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasLatitude {
+  public bool HasTimeMinutes {
     get { return (_hasBits0 & 2) != 0; }
   }
-  /// <summary>Clears the value of the "latitude" field</summary>
+  /// <summary>Clears the value of the "timeMinutes" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearLatitude() {
+  public void ClearTimeMinutes() {
     _hasBits0 &= ~2;
   }
 
-  /// <summary>Field number for the "longitude" field.</summary>
-  public const int LongitudeFieldNumber = 3;
-  private readonly static float LongitudeDefaultValue = 0F;
+  /// <summary>Field number for the "timeSeconds" field.</summary>
+  public const int TimeSecondsFieldNumber = 3;
+  private readonly static uint TimeSecondsDefaultValue = 0;
 
-  private float longitude_;
+  private uint timeSeconds_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public float Longitude {
-    get { if ((_hasBits0 & 4) != 0) { return longitude_; } else { return LongitudeDefaultValue; } }
+  public uint TimeSeconds {
+    get { if ((_hasBits0 & 4) != 0) { return timeSeconds_; } else { return TimeSecondsDefaultValue; } }
     set {
       _hasBits0 |= 4;
-      longitude_ = value;
+      timeSeconds_ = value;
     }
   }
-  /// <summary>Gets whether the "longitude" field is set</summary>
+  /// <summary>Gets whether the "timeSeconds" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasLongitude {
+  public bool HasTimeSeconds {
     get { return (_hasBits0 & 4) != 0; }
   }
-  /// <summary>Clears the value of the "longitude" field</summary>
+  /// <summary>Clears the value of the "timeSeconds" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearLongitude() {
+  public void ClearTimeSeconds() {
     _hasBits0 &= ~4;
+  }
+
+  /// <summary>Field number for the "latitudeMinutes" field.</summary>
+  public const int LatitudeMinutesFieldNumber = 4;
+  private readonly static float LatitudeMinutesDefaultValue = 0F;
+
+  private float latitudeMinutes_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public float LatitudeMinutes {
+    get { if ((_hasBits0 & 8) != 0) { return latitudeMinutes_; } else { return LatitudeMinutesDefaultValue; } }
+    set {
+      _hasBits0 |= 8;
+      latitudeMinutes_ = value;
+    }
+  }
+  /// <summary>Gets whether the "latitudeMinutes" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasLatitudeMinutes {
+    get { return (_hasBits0 & 8) != 0; }
+  }
+  /// <summary>Clears the value of the "latitudeMinutes" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearLatitudeMinutes() {
+    _hasBits0 &= ~8;
+  }
+
+  /// <summary>Field number for the "latitudeDegrees" field.</summary>
+  public const int LatitudeDegreesFieldNumber = 5;
+  private readonly static uint LatitudeDegreesDefaultValue = 0;
+
+  private uint latitudeDegrees_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public uint LatitudeDegrees {
+    get { if ((_hasBits0 & 16) != 0) { return latitudeDegrees_; } else { return LatitudeDegreesDefaultValue; } }
+    set {
+      _hasBits0 |= 16;
+      latitudeDegrees_ = value;
+    }
+  }
+  /// <summary>Gets whether the "latitudeDegrees" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasLatitudeDegrees {
+    get { return (_hasBits0 & 16) != 0; }
+  }
+  /// <summary>Clears the value of the "latitudeDegrees" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearLatitudeDegrees() {
+    _hasBits0 &= ~16;
+  }
+
+  /// <summary>Field number for the "latitudeCardinalAscii" field.</summary>
+  public const int LatitudeCardinalAsciiFieldNumber = 6;
+  private readonly static uint LatitudeCardinalAsciiDefaultValue = 0;
+
+  private uint latitudeCardinalAscii_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public uint LatitudeCardinalAscii {
+    get { if ((_hasBits0 & 32) != 0) { return latitudeCardinalAscii_; } else { return LatitudeCardinalAsciiDefaultValue; } }
+    set {
+      _hasBits0 |= 32;
+      latitudeCardinalAscii_ = value;
+    }
+  }
+  /// <summary>Gets whether the "latitudeCardinalAscii" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasLatitudeCardinalAscii {
+    get { return (_hasBits0 & 32) != 0; }
+  }
+  /// <summary>Clears the value of the "latitudeCardinalAscii" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearLatitudeCardinalAscii() {
+    _hasBits0 &= ~32;
+  }
+
+  /// <summary>Field number for the "longitudeMinutes" field.</summary>
+  public const int LongitudeMinutesFieldNumber = 7;
+  private readonly static float LongitudeMinutesDefaultValue = 0F;
+
+  private float longitudeMinutes_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public float LongitudeMinutes {
+    get { if ((_hasBits0 & 64) != 0) { return longitudeMinutes_; } else { return LongitudeMinutesDefaultValue; } }
+    set {
+      _hasBits0 |= 64;
+      longitudeMinutes_ = value;
+    }
+  }
+  /// <summary>Gets whether the "longitudeMinutes" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasLongitudeMinutes {
+    get { return (_hasBits0 & 64) != 0; }
+  }
+  /// <summary>Clears the value of the "longitudeMinutes" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearLongitudeMinutes() {
+    _hasBits0 &= ~64;
+  }
+
+  /// <summary>Field number for the "longitudeDegrees" field.</summary>
+  public const int LongitudeDegreesFieldNumber = 8;
+  private readonly static uint LongitudeDegreesDefaultValue = 0;
+
+  private uint longitudeDegrees_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public uint LongitudeDegrees {
+    get { if ((_hasBits0 & 128) != 0) { return longitudeDegrees_; } else { return LongitudeDegreesDefaultValue; } }
+    set {
+      _hasBits0 |= 128;
+      longitudeDegrees_ = value;
+    }
+  }
+  /// <summary>Gets whether the "longitudeDegrees" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasLongitudeDegrees {
+    get { return (_hasBits0 & 128) != 0; }
+  }
+  /// <summary>Clears the value of the "longitudeDegrees" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearLongitudeDegrees() {
+    _hasBits0 &= ~128;
+  }
+
+  /// <summary>Field number for the "longitudeCardinalAscii" field.</summary>
+  public const int LongitudeCardinalAsciiFieldNumber = 9;
+  private readonly static uint LongitudeCardinalAsciiDefaultValue = 0;
+
+  private uint longitudeCardinalAscii_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public uint LongitudeCardinalAscii {
+    get { if ((_hasBits0 & 256) != 0) { return longitudeCardinalAscii_; } else { return LongitudeCardinalAsciiDefaultValue; } }
+    set {
+      _hasBits0 |= 256;
+      longitudeCardinalAscii_ = value;
+    }
+  }
+  /// <summary>Gets whether the "longitudeCardinalAscii" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasLongitudeCardinalAscii {
+    get { return (_hasBits0 & 256) != 0; }
+  }
+  /// <summary>Clears the value of the "longitudeCardinalAscii" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearLongitudeCardinalAscii() {
+    _hasBits0 &= ~256;
+  }
+
+  /// <summary>Field number for the "numberOfSatellitesInUse" field.</summary>
+  public const int NumberOfSatellitesInUseFieldNumber = 10;
+  private readonly static uint NumberOfSatellitesInUseDefaultValue = 0;
+
+  private uint numberOfSatellitesInUse_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public uint NumberOfSatellitesInUse {
+    get { if ((_hasBits0 & 512) != 0) { return numberOfSatellitesInUse_; } else { return NumberOfSatellitesInUseDefaultValue; } }
+    set {
+      _hasBits0 |= 512;
+      numberOfSatellitesInUse_ = value;
+    }
+  }
+  /// <summary>Gets whether the "numberOfSatellitesInUse" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasNumberOfSatellitesInUse {
+    get { return (_hasBits0 & 512) != 0; }
+  }
+  /// <summary>Clears the value of the "numberOfSatellitesInUse" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearNumberOfSatellitesInUse() {
+    _hasBits0 &= ~512;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override bool Equals(object other) {
-    return Equals(other as NmeaRecord_100);
+    return Equals(other as GnggaMessage_100);
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool Equals(NmeaRecord_100 other) {
+  public bool Equals(GnggaMessage_100 other) {
     if (ReferenceEquals(other, null)) {
       return false;
     }
     if (ReferenceEquals(other, this)) {
       return true;
     }
-    if (Timestamp != other.Timestamp) return false;
-    if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Latitude, other.Latitude)) return false;
-    if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Longitude, other.Longitude)) return false;
+    if (TimeHours != other.TimeHours) return false;
+    if (TimeMinutes != other.TimeMinutes) return false;
+    if (TimeSeconds != other.TimeSeconds) return false;
+    if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(LatitudeMinutes, other.LatitudeMinutes)) return false;
+    if (LatitudeDegrees != other.LatitudeDegrees) return false;
+    if (LatitudeCardinalAscii != other.LatitudeCardinalAscii) return false;
+    if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(LongitudeMinutes, other.LongitudeMinutes)) return false;
+    if (LongitudeDegrees != other.LongitudeDegrees) return false;
+    if (LongitudeCardinalAscii != other.LongitudeCardinalAscii) return false;
+    if (NumberOfSatellitesInUse != other.NumberOfSatellitesInUse) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override int GetHashCode() {
     int hash = 1;
-    if (HasTimestamp) hash ^= Timestamp.GetHashCode();
-    if (HasLatitude) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Latitude);
-    if (HasLongitude) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Longitude);
+    if (HasTimeHours) hash ^= TimeHours.GetHashCode();
+    if (HasTimeMinutes) hash ^= TimeMinutes.GetHashCode();
+    if (HasTimeSeconds) hash ^= TimeSeconds.GetHashCode();
+    if (HasLatitudeMinutes) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LatitudeMinutes);
+    if (HasLatitudeDegrees) hash ^= LatitudeDegrees.GetHashCode();
+    if (HasLatitudeCardinalAscii) hash ^= LatitudeCardinalAscii.GetHashCode();
+    if (HasLongitudeMinutes) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LongitudeMinutes);
+    if (HasLongitudeDegrees) hash ^= LongitudeDegrees.GetHashCode();
+    if (HasLongitudeCardinalAscii) hash ^= LongitudeCardinalAscii.GetHashCode();
+    if (HasNumberOfSatellitesInUse) hash ^= NumberOfSatellitesInUse.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -201,17 +397,45 @@ public sealed partial class NmeaRecord_100 : pb::IMessage<NmeaRecord_100>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (HasTimestamp) {
+    if (HasTimeHours) {
       output.WriteRawTag(8);
-      output.WriteUInt32(Timestamp);
+      output.WriteUInt32(TimeHours);
     }
-    if (HasLatitude) {
-      output.WriteRawTag(21);
-      output.WriteFloat(Latitude);
+    if (HasTimeMinutes) {
+      output.WriteRawTag(16);
+      output.WriteUInt32(TimeMinutes);
     }
-    if (HasLongitude) {
-      output.WriteRawTag(29);
-      output.WriteFloat(Longitude);
+    if (HasTimeSeconds) {
+      output.WriteRawTag(24);
+      output.WriteUInt32(TimeSeconds);
+    }
+    if (HasLatitudeMinutes) {
+      output.WriteRawTag(37);
+      output.WriteFloat(LatitudeMinutes);
+    }
+    if (HasLatitudeDegrees) {
+      output.WriteRawTag(40);
+      output.WriteUInt32(LatitudeDegrees);
+    }
+    if (HasLatitudeCardinalAscii) {
+      output.WriteRawTag(48);
+      output.WriteUInt32(LatitudeCardinalAscii);
+    }
+    if (HasLongitudeMinutes) {
+      output.WriteRawTag(61);
+      output.WriteFloat(LongitudeMinutes);
+    }
+    if (HasLongitudeDegrees) {
+      output.WriteRawTag(64);
+      output.WriteUInt32(LongitudeDegrees);
+    }
+    if (HasLongitudeCardinalAscii) {
+      output.WriteRawTag(72);
+      output.WriteUInt32(LongitudeCardinalAscii);
+    }
+    if (HasNumberOfSatellitesInUse) {
+      output.WriteRawTag(80);
+      output.WriteUInt32(NumberOfSatellitesInUse);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -222,17 +446,45 @@ public sealed partial class NmeaRecord_100 : pb::IMessage<NmeaRecord_100>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (HasTimestamp) {
+    if (HasTimeHours) {
       output.WriteRawTag(8);
-      output.WriteUInt32(Timestamp);
+      output.WriteUInt32(TimeHours);
     }
-    if (HasLatitude) {
-      output.WriteRawTag(21);
-      output.WriteFloat(Latitude);
+    if (HasTimeMinutes) {
+      output.WriteRawTag(16);
+      output.WriteUInt32(TimeMinutes);
     }
-    if (HasLongitude) {
-      output.WriteRawTag(29);
-      output.WriteFloat(Longitude);
+    if (HasTimeSeconds) {
+      output.WriteRawTag(24);
+      output.WriteUInt32(TimeSeconds);
+    }
+    if (HasLatitudeMinutes) {
+      output.WriteRawTag(37);
+      output.WriteFloat(LatitudeMinutes);
+    }
+    if (HasLatitudeDegrees) {
+      output.WriteRawTag(40);
+      output.WriteUInt32(LatitudeDegrees);
+    }
+    if (HasLatitudeCardinalAscii) {
+      output.WriteRawTag(48);
+      output.WriteUInt32(LatitudeCardinalAscii);
+    }
+    if (HasLongitudeMinutes) {
+      output.WriteRawTag(61);
+      output.WriteFloat(LongitudeMinutes);
+    }
+    if (HasLongitudeDegrees) {
+      output.WriteRawTag(64);
+      output.WriteUInt32(LongitudeDegrees);
+    }
+    if (HasLongitudeCardinalAscii) {
+      output.WriteRawTag(72);
+      output.WriteUInt32(LongitudeCardinalAscii);
+    }
+    if (HasNumberOfSatellitesInUse) {
+      output.WriteRawTag(80);
+      output.WriteUInt32(NumberOfSatellitesInUse);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -243,14 +495,35 @@ public sealed partial class NmeaRecord_100 : pb::IMessage<NmeaRecord_100>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public int CalculateSize() {
     int size = 0;
-    if (HasTimestamp) {
-      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Timestamp);
+    if (HasTimeHours) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TimeHours);
     }
-    if (HasLatitude) {
+    if (HasTimeMinutes) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TimeMinutes);
+    }
+    if (HasTimeSeconds) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TimeSeconds);
+    }
+    if (HasLatitudeMinutes) {
       size += 1 + 4;
     }
-    if (HasLongitude) {
+    if (HasLatitudeDegrees) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LatitudeDegrees);
+    }
+    if (HasLatitudeCardinalAscii) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LatitudeCardinalAscii);
+    }
+    if (HasLongitudeMinutes) {
       size += 1 + 4;
+    }
+    if (HasLongitudeDegrees) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LongitudeDegrees);
+    }
+    if (HasLongitudeCardinalAscii) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LongitudeCardinalAscii);
+    }
+    if (HasNumberOfSatellitesInUse) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NumberOfSatellitesInUse);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -259,18 +532,39 @@ public sealed partial class NmeaRecord_100 : pb::IMessage<NmeaRecord_100>
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void MergeFrom(NmeaRecord_100 other) {
+  public void MergeFrom(GnggaMessage_100 other) {
     if (other == null) {
       return;
     }
-    if (other.HasTimestamp) {
-      Timestamp = other.Timestamp;
+    if (other.HasTimeHours) {
+      TimeHours = other.TimeHours;
     }
-    if (other.HasLatitude) {
-      Latitude = other.Latitude;
+    if (other.HasTimeMinutes) {
+      TimeMinutes = other.TimeMinutes;
     }
-    if (other.HasLongitude) {
-      Longitude = other.Longitude;
+    if (other.HasTimeSeconds) {
+      TimeSeconds = other.TimeSeconds;
+    }
+    if (other.HasLatitudeMinutes) {
+      LatitudeMinutes = other.LatitudeMinutes;
+    }
+    if (other.HasLatitudeDegrees) {
+      LatitudeDegrees = other.LatitudeDegrees;
+    }
+    if (other.HasLatitudeCardinalAscii) {
+      LatitudeCardinalAscii = other.LatitudeCardinalAscii;
+    }
+    if (other.HasLongitudeMinutes) {
+      LongitudeMinutes = other.LongitudeMinutes;
+    }
+    if (other.HasLongitudeDegrees) {
+      LongitudeDegrees = other.LongitudeDegrees;
+    }
+    if (other.HasLongitudeCardinalAscii) {
+      LongitudeCardinalAscii = other.LongitudeCardinalAscii;
+    }
+    if (other.HasNumberOfSatellitesInUse) {
+      NumberOfSatellitesInUse = other.NumberOfSatellitesInUse;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -287,15 +581,43 @@ public sealed partial class NmeaRecord_100 : pb::IMessage<NmeaRecord_100>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 8: {
-          Timestamp = input.ReadUInt32();
+          TimeHours = input.ReadUInt32();
           break;
         }
-        case 21: {
-          Latitude = input.ReadFloat();
+        case 16: {
+          TimeMinutes = input.ReadUInt32();
           break;
         }
-        case 29: {
-          Longitude = input.ReadFloat();
+        case 24: {
+          TimeSeconds = input.ReadUInt32();
+          break;
+        }
+        case 37: {
+          LatitudeMinutes = input.ReadFloat();
+          break;
+        }
+        case 40: {
+          LatitudeDegrees = input.ReadUInt32();
+          break;
+        }
+        case 48: {
+          LatitudeCardinalAscii = input.ReadUInt32();
+          break;
+        }
+        case 61: {
+          LongitudeMinutes = input.ReadFloat();
+          break;
+        }
+        case 64: {
+          LongitudeDegrees = input.ReadUInt32();
+          break;
+        }
+        case 72: {
+          LongitudeCardinalAscii = input.ReadUInt32();
+          break;
+        }
+        case 80: {
+          NumberOfSatellitesInUse = input.ReadUInt32();
           break;
         }
       }
@@ -313,15 +635,43 @@ public sealed partial class NmeaRecord_100 : pb::IMessage<NmeaRecord_100>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 8: {
-          Timestamp = input.ReadUInt32();
+          TimeHours = input.ReadUInt32();
           break;
         }
-        case 21: {
-          Latitude = input.ReadFloat();
+        case 16: {
+          TimeMinutes = input.ReadUInt32();
           break;
         }
-        case 29: {
-          Longitude = input.ReadFloat();
+        case 24: {
+          TimeSeconds = input.ReadUInt32();
+          break;
+        }
+        case 37: {
+          LatitudeMinutes = input.ReadFloat();
+          break;
+        }
+        case 40: {
+          LatitudeDegrees = input.ReadUInt32();
+          break;
+        }
+        case 48: {
+          LatitudeCardinalAscii = input.ReadUInt32();
+          break;
+        }
+        case 61: {
+          LongitudeMinutes = input.ReadFloat();
+          break;
+        }
+        case 64: {
+          LongitudeDegrees = input.ReadUInt32();
+          break;
+        }
+        case 72: {
+          LongitudeCardinalAscii = input.ReadUInt32();
+          break;
+        }
+        case 80: {
+          NumberOfSatellitesInUse = input.ReadUInt32();
           break;
         }
       }
@@ -801,6 +1151,167 @@ public sealed partial class WifiStation : pb::IMessage<WifiStation>
 
 }
 
+public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_102>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<WifiStationList_102> _parser = new pb::MessageParser<WifiStationList_102>(() => new WifiStationList_102());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<WifiStationList_102> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[3]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public WifiStationList_102() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public WifiStationList_102(WifiStationList_102 other) : this() {
+    wifiStations_ = other.wifiStations_.Clone();
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public WifiStationList_102 Clone() {
+    return new WifiStationList_102(this);
+  }
+
+  /// <summary>Field number for the "wifiStations" field.</summary>
+  public const int WifiStationsFieldNumber = 1;
+  private static readonly pb::FieldCodec<global::WifiStation> _repeated_wifiStations_codec
+      = pb::FieldCodec.ForMessage(10, global::WifiStation.Parser);
+  private readonly pbc::RepeatedField<global::WifiStation> wifiStations_ = new pbc::RepeatedField<global::WifiStation>();
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public pbc::RepeatedField<global::WifiStation> WifiStations {
+    get { return wifiStations_; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as WifiStationList_102);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(WifiStationList_102 other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if(!wifiStations_.Equals(other.wifiStations_)) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    hash ^= wifiStations_.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    wifiStations_.WriteTo(output, _repeated_wifiStations_codec);
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    wifiStations_.WriteTo(ref output, _repeated_wifiStations_codec);
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    size += wifiStations_.CalculateSize(_repeated_wifiStations_codec);
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(WifiStationList_102 other) {
+    if (other == null) {
+      return;
+    }
+    wifiStations_.Add(other.wifiStations_);
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 10: {
+          wifiStations_.AddEntriesFrom(input, _repeated_wifiStations_codec);
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 10: {
+          wifiStations_.AddEntriesFrom(ref input, _repeated_wifiStations_codec);
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+}
+
 public sealed partial class CellTower : pb::IMessage<CellTower>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
@@ -814,7 +1325,7 @@ public sealed partial class CellTower : pb::IMessage<CellTower>
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[3]; }
+    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[4]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1099,7 +1610,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[4]; }
+    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[5]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1119,7 +1630,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
     _hasBits0 = other._hasBits0;
     timestamp_ = other.timestamp_;
     celltower_ = other.celltower_ != null ? other.celltower_.Clone() : null;
-    wifistations_ = other.wifistations_.Clone();
+    wifiStations_ = other.wifiStations_.Clone();
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -1163,14 +1674,14 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
     }
   }
 
-  /// <summary>Field number for the "wifistations" field.</summary>
-  public const int WifistationsFieldNumber = 3;
-  private static readonly pb::FieldCodec<global::WifiStation> _repeated_wifistations_codec
+  /// <summary>Field number for the "wifiStations" field.</summary>
+  public const int WifiStationsFieldNumber = 3;
+  private static readonly pb::FieldCodec<global::WifiStation> _repeated_wifiStations_codec
       = pb::FieldCodec.ForMessage(26, global::WifiStation.Parser);
-  private readonly pbc::RepeatedField<global::WifiStation> wifistations_ = new pbc::RepeatedField<global::WifiStation>();
+  private readonly pbc::RepeatedField<global::WifiStation> wifiStations_ = new pbc::RepeatedField<global::WifiStation>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<global::WifiStation> Wifistations {
-    get { return wifistations_; }
+  public pbc::RepeatedField<global::WifiStation> WifiStations {
+    get { return wifiStations_; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1188,7 +1699,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
     }
     if (Timestamp != other.Timestamp) return false;
     if (!object.Equals(Celltower, other.Celltower)) return false;
-    if(!wifistations_.Equals(other.wifistations_)) return false;
+    if(!wifiStations_.Equals(other.wifiStations_)) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -1197,7 +1708,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
     int hash = 1;
     if (HasTimestamp) hash ^= Timestamp.GetHashCode();
     if (celltower_ != null) hash ^= Celltower.GetHashCode();
-    hash ^= wifistations_.GetHashCode();
+    hash ^= wifiStations_.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -1222,7 +1733,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
       output.WriteRawTag(18);
       output.WriteMessage(Celltower);
     }
-    wifistations_.WriteTo(output, _repeated_wifistations_codec);
+    wifiStations_.WriteTo(output, _repeated_wifiStations_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -1240,7 +1751,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
       output.WriteRawTag(18);
       output.WriteMessage(Celltower);
     }
-    wifistations_.WriteTo(ref output, _repeated_wifistations_codec);
+    wifiStations_.WriteTo(ref output, _repeated_wifiStations_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -1256,7 +1767,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
     if (celltower_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Celltower);
     }
-    size += wifistations_.CalculateSize(_repeated_wifistations_codec);
+    size += wifiStations_.CalculateSize(_repeated_wifiStations_codec);
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
     }
@@ -1277,7 +1788,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
       }
       Celltower.MergeFrom(other.Celltower);
     }
-    wifistations_.Add(other.wifistations_);
+    wifiStations_.Add(other.wifiStations_);
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
 
@@ -1304,7 +1815,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
           break;
         }
         case 26: {
-          wifistations_.AddEntriesFrom(input, _repeated_wifistations_codec);
+          wifiStations_.AddEntriesFrom(input, _repeated_wifiStations_codec);
           break;
         }
       }
@@ -1333,7 +1844,7 @@ public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLoca
           break;
         }
         case 26: {
-          wifistations_.AddEntriesFrom(ref input, _repeated_wifistations_codec);
+          wifiStations_.AddEntriesFrom(ref input, _repeated_wifiStations_codec);
           break;
         }
       }
