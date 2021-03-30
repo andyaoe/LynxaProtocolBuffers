@@ -39,12 +39,12 @@ typedef struct _WifiStation {
     int32_t rssi;
 } WifiStation;
 
-typedef struct _GoogleLocationServices_102 {
+typedef struct _GoogleLocationServices_103 {
     uint32_t timestamp;
     CellTower celltower;
     pb_size_t wifiStations_count;
     WifiStation wifiStations[16];
-} GoogleLocationServices_102;
+} GoogleLocationServices_103;
 
 typedef struct _WifiStationList_102 {
     pb_size_t wifiStations_count;
@@ -62,13 +62,13 @@ extern "C" {
 #define WifiStation_init_default                 {{0}, 0}
 #define WifiStationList_102_init_default         {0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
 #define CellTower_init_default                   {0, 0, 0}
-#define GoogleLocationServices_102_init_default  {0, CellTower_init_default, 0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
+#define GoogleLocationServices_103_init_default  {0, CellTower_init_default, 0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
 #define GnggaMessage_100_init_zero               {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_zero                 {0, ""}
 #define WifiStation_init_zero                    {{0}, 0}
 #define WifiStationList_102_init_zero            {0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
 #define CellTower_init_zero                      {0, 0, 0}
-#define GoogleLocationServices_102_init_zero     {0, CellTower_init_zero, 0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
+#define GoogleLocationServices_103_init_zero     {0, CellTower_init_zero, 0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
 
 /* Field tags (for use in manual encoding/decoding) */
 #define CellTower_temp1_tag                      1
@@ -88,9 +88,9 @@ extern "C" {
 #define LogMessage_101_logMessage_tag            2
 #define WifiStation_bssid_tag                    1
 #define WifiStation_rssi_tag                     2
-#define GoogleLocationServices_102_timestamp_tag 1
-#define GoogleLocationServices_102_celltower_tag 2
-#define GoogleLocationServices_102_wifiStations_tag 3
+#define GoogleLocationServices_103_timestamp_tag 1
+#define GoogleLocationServices_103_celltower_tag 2
+#define GoogleLocationServices_103_wifiStations_tag 3
 #define WifiStationList_102_wifiStations_tag     1
 
 /* Struct field encoding specification for nanopb */
@@ -133,21 +133,21 @@ X(a, STATIC,   REQUIRED, INT32,    temp3,             3)
 #define CellTower_CALLBACK NULL
 #define CellTower_DEFAULT NULL
 
-#define GoogleLocationServices_102_FIELDLIST(X, a) \
+#define GoogleLocationServices_103_FIELDLIST(X, a) \
 X(a, STATIC,   REQUIRED, UINT32,   timestamp,         1) \
 X(a, STATIC,   REQUIRED, MESSAGE,  celltower,         2) \
 X(a, STATIC,   REPEATED, MESSAGE,  wifiStations,      3)
-#define GoogleLocationServices_102_CALLBACK NULL
-#define GoogleLocationServices_102_DEFAULT NULL
-#define GoogleLocationServices_102_celltower_MSGTYPE CellTower
-#define GoogleLocationServices_102_wifiStations_MSGTYPE WifiStation
+#define GoogleLocationServices_103_CALLBACK NULL
+#define GoogleLocationServices_103_DEFAULT NULL
+#define GoogleLocationServices_103_celltower_MSGTYPE CellTower
+#define GoogleLocationServices_103_wifiStations_MSGTYPE WifiStation
 
 extern const pb_msgdesc_t GnggaMessage_100_msg;
 extern const pb_msgdesc_t LogMessage_101_msg;
 extern const pb_msgdesc_t WifiStation_msg;
 extern const pb_msgdesc_t WifiStationList_102_msg;
 extern const pb_msgdesc_t CellTower_msg;
-extern const pb_msgdesc_t GoogleLocationServices_102_msg;
+extern const pb_msgdesc_t GoogleLocationServices_103_msg;
 
 /* Defines for backwards compatibility with code written before nanopb-0.4.0 */
 #define GnggaMessage_100_fields &GnggaMessage_100_msg
@@ -155,7 +155,7 @@ extern const pb_msgdesc_t GoogleLocationServices_102_msg;
 #define WifiStation_fields &WifiStation_msg
 #define WifiStationList_102_fields &WifiStationList_102_msg
 #define CellTower_fields &CellTower_msg
-#define GoogleLocationServices_102_fields &GoogleLocationServices_102_msg
+#define GoogleLocationServices_103_fields &GoogleLocationServices_103_msg
 
 /* Maximum encoded size of messages (where known) */
 #define GnggaMessage_100_size                    58
@@ -163,7 +163,7 @@ extern const pb_msgdesc_t GoogleLocationServices_102_msg;
 #define WifiStation_size                         19
 #define WifiStationList_102_size                 252
 #define CellTower_size                           33
-#define GoogleLocationServices_102_size          377
+#define GoogleLocationServices_103_size          377
 
 #ifdef __cplusplus
 } /* extern "C" */

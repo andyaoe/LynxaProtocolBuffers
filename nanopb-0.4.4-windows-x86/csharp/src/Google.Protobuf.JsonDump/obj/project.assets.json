@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Google.Protobuf/3.15.3": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Google.Protobuf/3.15.3": {
+      "type": "project",
+      "path": "../Google.Protobuf/Google.Protobuf.csproj",
+      "msbuildProject": "../Google.Protobuf/Google.Protobuf.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v2.1": [
+      "Google.Protobuf >= 3.15.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\andya\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf.JsonDump\\Google.Protobuf.JsonDump.csproj",
+      "projectName": "Google.Protobuf.JsonDump",
+      "projectPath": "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf.JsonDump\\Google.Protobuf.JsonDump.csproj",
+      "packagesPath": "C:\\Users\\andya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf.JsonDump\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\andya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp2.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "projectReferences": {
+            "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf\\Google.Protobuf.csproj": {
+              "projectPath": "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf\\Google.Protobuf.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "netcoreapp2.1": {}
+    }
+  }
+}

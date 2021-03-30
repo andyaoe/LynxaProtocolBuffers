@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Google.Protobuf/3.15.3": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        }
+      },
+      "Google.Protobuf.Test/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Google.Protobuf": "3.15.3",
+          "Google.Protobuf.Test.TestProtos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Google.Protobuf.Test.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Google.Protobuf.Test.dll": {}
+        }
+      },
+      "Google.Protobuf.Test.TestProtos/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Google.Protobuf": "3.15.3"
+        },
+        "compile": {
+          "bin/placeholder/Google.Protobuf.Test.TestProtos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Google.Protobuf.Test.TestProtos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Google.Protobuf/3.15.3": {
+      "type": "project",
+      "path": "../Google.Protobuf/Google.Protobuf.csproj",
+      "msbuildProject": "../Google.Protobuf/Google.Protobuf.csproj"
+    },
+    "Google.Protobuf.Test/1.0.0": {
+      "type": "project",
+      "path": "../Google.Protobuf.Test/Google.Protobuf.Test.csproj",
+      "msbuildProject": "../Google.Protobuf.Test/Google.Protobuf.Test.csproj"
+    },
+    "Google.Protobuf.Test.TestProtos/1.0.0": {
+      "type": "project",
+      "path": "../Google.Protobuf.Test.TestProtos/Google.Protobuf.Test.TestProtos.csproj",
+      "msbuildProject": "../Google.Protobuf.Test.TestProtos/Google.Protobuf.Test.TestProtos.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v2.1": [
+      "Google.Protobuf >= 3.15.3",
+      "Google.Protobuf.Test >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\andya\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf.Conformance\\Google.Protobuf.Conformance.csproj",
+      "projectName": "Google.Protobuf.Conformance",
+      "projectPath": "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf.Conformance\\Google.Protobuf.Conformance.csproj",
+      "packagesPath": "C:\\Users\\andya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf.Conformance\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\andya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp2.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "projectReferences": {
+            "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf.Test\\Google.Protobuf.Test.csproj": {
+              "projectPath": "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf.Test\\Google.Protobuf.Test.csproj"
+            },
+            "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf\\Google.Protobuf.csproj": {
+              "projectPath": "C:\\Users\\andya\\Downloads\\protobuf-csharp-3.15.3\\protobuf-3.15.3\\csharp\\src\\Google.Protobuf\\Google.Protobuf.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "netcoreapp2.1": {}
+    }
+  }
+}
