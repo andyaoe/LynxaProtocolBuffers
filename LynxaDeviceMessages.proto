@@ -36,5 +36,4 @@ message WifiStationList_102
 message ModemParameters_103
 {
 	required string cell_id = 1 [(nanopb).max_length = 16];
-	required uint32 phys_cell_id = 2;
 }

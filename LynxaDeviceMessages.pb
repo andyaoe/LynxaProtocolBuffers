@@ -1,5 +1,5 @@
 
-º
+˜
 LynxaDeviceMessages.protonanopb.proto"È
 GnggaMessage_100
 	timeHours (R	timeHours 
@@ -23,8 +23,6 @@ logMessage"C
 ’?’?xRbssid
 rssi (Rrssi"N
 WifiStationList_1027
-wifiStations (2.WifiStationB’?RwifiStations"W
+wifiStations (2.WifiStationB’?RwifiStations"5
 ModemParameters_103
-cell_id (	B’?pRcellId 
-phys_cell_id (R
-physCellId
+cell_id (	B’?pRcellId

@@ -30,7 +30,6 @@ typedef struct _LogMessage_101 {
 
 typedef struct _ModemParameters_103 {
     char cell_id[17];
-    uint32_t phys_cell_id;
 } ModemParameters_103;
 
 typedef struct _WifiStation {
@@ -53,12 +52,12 @@ extern "C" {
 #define LogMessage_101_init_default              {0, ""}
 #define WifiStation_init_default                 {{0}, 0}
 #define WifiStationList_102_init_default         {0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
-#define ModemParameters_103_init_default         {"", 0}
+#define ModemParameters_103_init_default         {""}
 #define GnggaMessage_100_init_zero               {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_zero                 {0, ""}
 #define WifiStation_init_zero                    {{0}, 0}
 #define WifiStationList_102_init_zero            {0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
-#define ModemParameters_103_init_zero            {"", 0}
+#define ModemParameters_103_init_zero            {""}
 
 /* Field tags (for use in manual encoding/decoding) */
 #define GnggaMessage_100_timeHours_tag           1
@@ -74,7 +73,6 @@ extern "C" {
 #define LogMessage_101_timestamp_tag             1
 #define LogMessage_101_logMessage_tag            2
 #define ModemParameters_103_cell_id_tag          1
-#define ModemParameters_103_phys_cell_id_tag     2
 #define WifiStation_bssid_tag                    1
 #define WifiStation_rssi_tag                     2
 #define WifiStationList_102_wifiStations_tag     1
@@ -113,8 +111,7 @@ X(a, STATIC,   REPEATED, MESSAGE,  wifiStations,      1)
 #define WifiStationList_102_wifiStations_MSGTYPE WifiStation
 
 #define ModemParameters_103_FIELDLIST(X, a) \
-X(a, STATIC,   REQUIRED, STRING,   cell_id,           1) \
-X(a, STATIC,   REQUIRED, UINT32,   phys_cell_id,      2)
+X(a, STATIC,   REQUIRED, STRING,   cell_id,           1)
 #define ModemParameters_103_CALLBACK NULL
 #define ModemParameters_103_DEFAULT NULL
 
@@ -136,7 +133,7 @@ extern const pb_msgdesc_t ModemParameters_103_msg;
 #define LogMessage_101_size                      137
 #define WifiStation_size                         19
 #define WifiStationList_102_size                 252
-#define ModemParameters_103_size                 24
+#define ModemParameters_103_size                 18
 
 #ifdef __cplusplus
 } /* extern "C" */
