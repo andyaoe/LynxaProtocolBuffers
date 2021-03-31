@@ -33,16 +33,8 @@ message WifiStationList_102
 	repeated WifiStation wifiStations = 1 [(nanopb).max_count = 12];
 }
 
-message CellTower
+message ModemParameters_103
 {
-	required int32 temp1 = 1;
-	required int32 temp2 = 2;
-	required int32 temp3 = 3;
-}
-
-message GoogleLocationServices_103
-{
-	required uint32 timestamp = 1;
-	required CellTower celltower= 2;
-	repeated WifiStation wifiStations = 3 [(nanopb).max_count = 16];
+	required string cell_id = 1 [(nanopb).max_length = 16];
+	required uint32 phys_cell_id = 2;
 }

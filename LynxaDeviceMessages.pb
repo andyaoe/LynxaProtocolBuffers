@@ -1,5 +1,5 @@
 
-–
+∫
 LynxaDeviceMessages.protonanopb.proto"»
 GnggaMessage_100
 	timeHours (R	timeHours 
@@ -23,13 +23,8 @@ logMessage"C
 í?í?xRbssid
 rssi (Rrssi"N
 WifiStationList_1027
-wifiStations (2.WifiStationBí?RwifiStations"M
-	CellTower
-temp1 (Rtemp1
-temp2 (Rtemp2
-temp3 (Rtemp3"ù
-GoogleLocationServices_103
-	timestamp (R	timestamp(
-	celltower (2
-.CellTowerR	celltower7
-wifiStations (2.WifiStationBí?RwifiStations
+wifiStations (2.WifiStationBí?RwifiStations"W
+ModemParameters_103
+cell_id (	Bí?pRcellId 
+phys_cell_id (R
+physCellId

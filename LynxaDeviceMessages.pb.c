@@ -18,10 +18,7 @@ PB_BIND(WifiStation, WifiStation, AUTO)
 PB_BIND(WifiStationList_102, WifiStationList_102, AUTO)
 
 
-PB_BIND(CellTower, CellTower, AUTO)
-
-
-PB_BIND(GoogleLocationServices_103, GoogleLocationServices_103, AUTO)
+PB_BIND(ModemParameters_103, ModemParameters_103, AUTO)
 
 
 
