@@ -33,11 +33,8 @@ public static partial class LynxaDeviceMessagesReflection {
           "Cgpsb2dNZXNzYWdlGAIgAigJQgaSPwNwgAEiNgoLV2lmaVN0YXRpb24SGQoF",
           "YnNzaWQYASACKAxCCpI/AggGkj8CeAESDAoEcnNzaRgCIAIoBSJAChNXaWZp",
           "U3RhdGlvbkxpc3RfMTAyEikKDHdpZmlTdGF0aW9ucxgBIAMoCzIMLldpZmlT",
-          "dGF0aW9uQgWSPwIQDCI4CglDZWxsVG93ZXISDQoFdGVtcDEYASACKAUSDQoF",
-          "dGVtcDIYAiACKAUSDQoFdGVtcDMYAyACKAUieQoaR29vZ2xlTG9jYXRpb25T",
-          "ZXJ2aWNlc18xMDISEQoJdGltZXN0YW1wGAEgAigNEh0KCWNlbGx0b3dlchgC",
-          "IAIoCzIKLkNlbGxUb3dlchIpCgx3aWZpU3RhdGlvbnMYAyADKAsyDC5XaWZp",
-          "U3RhdGlvbkIFkj8CEBA="));
+          "dGF0aW9uQgWSPwIQDCItChNNb2RlbVBhcmFtZXRlcnNfMTAzEhYKB2NlbGxf",
+          "aWQYASACKAlCBZI/AnAQ"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -45,8 +42,7 @@ public static partial class LynxaDeviceMessagesReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::LogMessage_101), global::LogMessage_101.Parser, new[]{ "Timestamp", "LogMessage" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::WifiStation), global::WifiStation.Parser, new[]{ "Bssid", "Rssi" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::WifiStationList_102), global::WifiStationList_102.Parser, new[]{ "WifiStations" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::CellTower), global::CellTower.Parser, new[]{ "Temp1", "Temp2", "Temp3" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::GoogleLocationServices_102), global::GoogleLocationServices_102.Parser, new[]{ "Timestamp", "Celltower", "WifiStations" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::ModemParameters_103), global::ModemParameters_103.Parser, new[]{ "CellId" }, null, null, null, null)
         }));
   }
   #endregion
@@ -1312,16 +1308,15 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
 
 }
 
-public sealed partial class CellTower : pb::IMessage<CellTower>
+public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_103>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
 #endif
 {
-  private static readonly pb::MessageParser<CellTower> _parser = new pb::MessageParser<CellTower>(() => new CellTower());
+  private static readonly pb::MessageParser<ModemParameters_103> _parser = new pb::MessageParser<ModemParameters_103>(() => new ModemParameters_103());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public static pb::MessageParser<CellTower> Parser { get { return _parser; } }
+  public static pb::MessageParser<ModemParameters_103> Parser { get { return _parser; } }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
@@ -1334,123 +1329,67 @@ public sealed partial class CellTower : pb::IMessage<CellTower>
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public CellTower() {
+  public ModemParameters_103() {
     OnConstruction();
   }
 
   partial void OnConstruction();
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public CellTower(CellTower other) : this() {
-    _hasBits0 = other._hasBits0;
-    temp1_ = other.temp1_;
-    temp2_ = other.temp2_;
-    temp3_ = other.temp3_;
+  public ModemParameters_103(ModemParameters_103 other) : this() {
+    cellId_ = other.cellId_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public CellTower Clone() {
-    return new CellTower(this);
+  public ModemParameters_103 Clone() {
+    return new ModemParameters_103(this);
   }
 
-  /// <summary>Field number for the "temp1" field.</summary>
-  public const int Temp1FieldNumber = 1;
-  private readonly static int Temp1DefaultValue = 0;
+  /// <summary>Field number for the "cell_id" field.</summary>
+  public const int CellIdFieldNumber = 1;
+  private readonly static string CellIdDefaultValue = "";
 
-  private int temp1_;
+  private string cellId_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public int Temp1 {
-    get { if ((_hasBits0 & 1) != 0) { return temp1_; } else { return Temp1DefaultValue; } }
+  public string CellId {
+    get { return cellId_ ?? CellIdDefaultValue; }
     set {
-      _hasBits0 |= 1;
-      temp1_ = value;
+      cellId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
     }
   }
-  /// <summary>Gets whether the "temp1" field is set</summary>
+  /// <summary>Gets whether the "cell_id" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasTemp1 {
-    get { return (_hasBits0 & 1) != 0; }
+  public bool HasCellId {
+    get { return cellId_ != null; }
   }
-  /// <summary>Clears the value of the "temp1" field</summary>
+  /// <summary>Clears the value of the "cell_id" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearTemp1() {
-    _hasBits0 &= ~1;
-  }
-
-  /// <summary>Field number for the "temp2" field.</summary>
-  public const int Temp2FieldNumber = 2;
-  private readonly static int Temp2DefaultValue = 0;
-
-  private int temp2_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public int Temp2 {
-    get { if ((_hasBits0 & 2) != 0) { return temp2_; } else { return Temp2DefaultValue; } }
-    set {
-      _hasBits0 |= 2;
-      temp2_ = value;
-    }
-  }
-  /// <summary>Gets whether the "temp2" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasTemp2 {
-    get { return (_hasBits0 & 2) != 0; }
-  }
-  /// <summary>Clears the value of the "temp2" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearTemp2() {
-    _hasBits0 &= ~2;
-  }
-
-  /// <summary>Field number for the "temp3" field.</summary>
-  public const int Temp3FieldNumber = 3;
-  private readonly static int Temp3DefaultValue = 0;
-
-  private int temp3_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public int Temp3 {
-    get { if ((_hasBits0 & 4) != 0) { return temp3_; } else { return Temp3DefaultValue; } }
-    set {
-      _hasBits0 |= 4;
-      temp3_ = value;
-    }
-  }
-  /// <summary>Gets whether the "temp3" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasTemp3 {
-    get { return (_hasBits0 & 4) != 0; }
-  }
-  /// <summary>Clears the value of the "temp3" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearTemp3() {
-    _hasBits0 &= ~4;
+  public void ClearCellId() {
+    cellId_ = null;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override bool Equals(object other) {
-    return Equals(other as CellTower);
+    return Equals(other as ModemParameters_103);
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool Equals(CellTower other) {
+  public bool Equals(ModemParameters_103 other) {
     if (ReferenceEquals(other, null)) {
       return false;
     }
     if (ReferenceEquals(other, this)) {
       return true;
     }
-    if (Temp1 != other.Temp1) return false;
-    if (Temp2 != other.Temp2) return false;
-    if (Temp3 != other.Temp3) return false;
+    if (CellId != other.CellId) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override int GetHashCode() {
     int hash = 1;
-    if (HasTemp1) hash ^= Temp1.GetHashCode();
-    if (HasTemp2) hash ^= Temp2.GetHashCode();
-    if (HasTemp3) hash ^= Temp3.GetHashCode();
+    if (HasCellId) hash ^= CellId.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -1467,17 +1406,9 @@ public sealed partial class CellTower : pb::IMessage<CellTower>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (HasTemp1) {
-      output.WriteRawTag(8);
-      output.WriteInt32(Temp1);
-    }
-    if (HasTemp2) {
-      output.WriteRawTag(16);
-      output.WriteInt32(Temp2);
-    }
-    if (HasTemp3) {
-      output.WriteRawTag(24);
-      output.WriteInt32(Temp3);
+    if (HasCellId) {
+      output.WriteRawTag(10);
+      output.WriteString(CellId);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -1488,17 +1419,9 @@ public sealed partial class CellTower : pb::IMessage<CellTower>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (HasTemp1) {
-      output.WriteRawTag(8);
-      output.WriteInt32(Temp1);
-    }
-    if (HasTemp2) {
-      output.WriteRawTag(16);
-      output.WriteInt32(Temp2);
-    }
-    if (HasTemp3) {
-      output.WriteRawTag(24);
-      output.WriteInt32(Temp3);
+    if (HasCellId) {
+      output.WriteRawTag(10);
+      output.WriteString(CellId);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -1509,14 +1432,8 @@ public sealed partial class CellTower : pb::IMessage<CellTower>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public int CalculateSize() {
     int size = 0;
-    if (HasTemp1) {
-      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Temp1);
-    }
-    if (HasTemp2) {
-      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Temp2);
-    }
-    if (HasTemp3) {
-      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Temp3);
+    if (HasCellId) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(CellId);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -1525,18 +1442,12 @@ public sealed partial class CellTower : pb::IMessage<CellTower>
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void MergeFrom(CellTower other) {
+  public void MergeFrom(ModemParameters_103 other) {
     if (other == null) {
       return;
     }
-    if (other.HasTemp1) {
-      Temp1 = other.Temp1;
-    }
-    if (other.HasTemp2) {
-      Temp2 = other.Temp2;
-    }
-    if (other.HasTemp3) {
-      Temp3 = other.Temp3;
+    if (other.HasCellId) {
+      CellId = other.CellId;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -1552,16 +1463,8 @@ public sealed partial class CellTower : pb::IMessage<CellTower>
         default:
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
-        case 8: {
-          Temp1 = input.ReadInt32();
-          break;
-        }
-        case 16: {
-          Temp2 = input.ReadInt32();
-          break;
-        }
-        case 24: {
-          Temp3 = input.ReadInt32();
+        case 10: {
+          CellId = input.ReadString();
           break;
         }
       }
@@ -1578,273 +1481,8 @@ public sealed partial class CellTower : pb::IMessage<CellTower>
         default:
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
-        case 8: {
-          Temp1 = input.ReadInt32();
-          break;
-        }
-        case 16: {
-          Temp2 = input.ReadInt32();
-          break;
-        }
-        case 24: {
-          Temp3 = input.ReadInt32();
-          break;
-        }
-      }
-    }
-  }
-  #endif
-
-}
-
-public sealed partial class GoogleLocationServices_102 : pb::IMessage<GoogleLocationServices_102>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    , pb::IBufferMessage
-#endif
-{
-  private static readonly pb::MessageParser<GoogleLocationServices_102> _parser = new pb::MessageParser<GoogleLocationServices_102>(() => new GoogleLocationServices_102());
-  private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public static pb::MessageParser<GoogleLocationServices_102> Parser { get { return _parser; } }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public static pbr::MessageDescriptor Descriptor {
-    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[5]; }
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  pbr::MessageDescriptor pb::IMessage.Descriptor {
-    get { return Descriptor; }
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public GoogleLocationServices_102() {
-    OnConstruction();
-  }
-
-  partial void OnConstruction();
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public GoogleLocationServices_102(GoogleLocationServices_102 other) : this() {
-    _hasBits0 = other._hasBits0;
-    timestamp_ = other.timestamp_;
-    celltower_ = other.celltower_ != null ? other.celltower_.Clone() : null;
-    wifiStations_ = other.wifiStations_.Clone();
-    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public GoogleLocationServices_102 Clone() {
-    return new GoogleLocationServices_102(this);
-  }
-
-  /// <summary>Field number for the "timestamp" field.</summary>
-  public const int TimestampFieldNumber = 1;
-  private readonly static uint TimestampDefaultValue = 0;
-
-  private uint timestamp_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public uint Timestamp {
-    get { if ((_hasBits0 & 1) != 0) { return timestamp_; } else { return TimestampDefaultValue; } }
-    set {
-      _hasBits0 |= 1;
-      timestamp_ = value;
-    }
-  }
-  /// <summary>Gets whether the "timestamp" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasTimestamp {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "timestamp" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearTimestamp() {
-    _hasBits0 &= ~1;
-  }
-
-  /// <summary>Field number for the "celltower" field.</summary>
-  public const int CelltowerFieldNumber = 2;
-  private global::CellTower celltower_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public global::CellTower Celltower {
-    get { return celltower_; }
-    set {
-      celltower_ = value;
-    }
-  }
-
-  /// <summary>Field number for the "wifiStations" field.</summary>
-  public const int WifiStationsFieldNumber = 3;
-  private static readonly pb::FieldCodec<global::WifiStation> _repeated_wifiStations_codec
-      = pb::FieldCodec.ForMessage(26, global::WifiStation.Parser);
-  private readonly pbc::RepeatedField<global::WifiStation> wifiStations_ = new pbc::RepeatedField<global::WifiStation>();
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<global::WifiStation> WifiStations {
-    get { return wifiStations_; }
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public override bool Equals(object other) {
-    return Equals(other as GoogleLocationServices_102);
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool Equals(GoogleLocationServices_102 other) {
-    if (ReferenceEquals(other, null)) {
-      return false;
-    }
-    if (ReferenceEquals(other, this)) {
-      return true;
-    }
-    if (Timestamp != other.Timestamp) return false;
-    if (!object.Equals(Celltower, other.Celltower)) return false;
-    if(!wifiStations_.Equals(other.wifiStations_)) return false;
-    return Equals(_unknownFields, other._unknownFields);
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public override int GetHashCode() {
-    int hash = 1;
-    if (HasTimestamp) hash ^= Timestamp.GetHashCode();
-    if (celltower_ != null) hash ^= Celltower.GetHashCode();
-    hash ^= wifiStations_.GetHashCode();
-    if (_unknownFields != null) {
-      hash ^= _unknownFields.GetHashCode();
-    }
-    return hash;
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public override string ToString() {
-    return pb::JsonFormatter.ToDiagnosticString(this);
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void WriteTo(pb::CodedOutputStream output) {
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    output.WriteRawMessage(this);
-  #else
-    if (HasTimestamp) {
-      output.WriteRawTag(8);
-      output.WriteUInt32(Timestamp);
-    }
-    if (celltower_ != null) {
-      output.WriteRawTag(18);
-      output.WriteMessage(Celltower);
-    }
-    wifiStations_.WriteTo(output, _repeated_wifiStations_codec);
-    if (_unknownFields != null) {
-      _unknownFields.WriteTo(output);
-    }
-  #endif
-  }
-
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (HasTimestamp) {
-      output.WriteRawTag(8);
-      output.WriteUInt32(Timestamp);
-    }
-    if (celltower_ != null) {
-      output.WriteRawTag(18);
-      output.WriteMessage(Celltower);
-    }
-    wifiStations_.WriteTo(ref output, _repeated_wifiStations_codec);
-    if (_unknownFields != null) {
-      _unknownFields.WriteTo(ref output);
-    }
-  }
-  #endif
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public int CalculateSize() {
-    int size = 0;
-    if (HasTimestamp) {
-      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Timestamp);
-    }
-    if (celltower_ != null) {
-      size += 1 + pb::CodedOutputStream.ComputeMessageSize(Celltower);
-    }
-    size += wifiStations_.CalculateSize(_repeated_wifiStations_codec);
-    if (_unknownFields != null) {
-      size += _unknownFields.CalculateSize();
-    }
-    return size;
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void MergeFrom(GoogleLocationServices_102 other) {
-    if (other == null) {
-      return;
-    }
-    if (other.HasTimestamp) {
-      Timestamp = other.Timestamp;
-    }
-    if (other.celltower_ != null) {
-      if (celltower_ == null) {
-        Celltower = new global::CellTower();
-      }
-      Celltower.MergeFrom(other.Celltower);
-    }
-    wifiStations_.Add(other.wifiStations_);
-    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-  }
-
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void MergeFrom(pb::CodedInputStream input) {
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    input.ReadRawMessage(this);
-  #else
-    uint tag;
-    while ((tag = input.ReadTag()) != 0) {
-      switch(tag) {
-        default:
-          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-          break;
-        case 8: {
-          Timestamp = input.ReadUInt32();
-          break;
-        }
-        case 18: {
-          if (celltower_ == null) {
-            Celltower = new global::CellTower();
-          }
-          input.ReadMessage(Celltower);
-          break;
-        }
-        case 26: {
-          wifiStations_.AddEntriesFrom(input, _repeated_wifiStations_codec);
-          break;
-        }
-      }
-    }
-  #endif
-  }
-
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-    uint tag;
-    while ((tag = input.ReadTag()) != 0) {
-      switch(tag) {
-        default:
-          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-          break;
-        case 8: {
-          Timestamp = input.ReadUInt32();
-          break;
-        }
-        case 18: {
-          if (celltower_ == null) {
-            Celltower = new global::CellTower();
-          }
-          input.ReadMessage(Celltower);
-          break;
-        }
-        case 26: {
-          wifiStations_.AddEntriesFrom(ref input, _repeated_wifiStations_codec);
+        case 10: {
+          CellId = input.ReadString();
           break;
         }
       }
