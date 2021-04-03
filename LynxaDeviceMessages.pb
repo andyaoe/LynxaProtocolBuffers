@@ -1,10 +1,7 @@
 
-˜
-LynxaDeviceMessages.protonanopb.proto"È
-GnggaMessage_100
-	timeHours (R	timeHours 
-timeMinutes (RtimeMinutes 
-timeSeconds (RtimeSeconds(
+¶
+LynxaDeviceMessages.protonanopb.proto"æ
+GnggaMessage_100(
 latitudeMinutes (RlatitudeMinutes(
 latitudeDegrees (RlatitudeDegrees4
 latitudeCardinalAscii (RlatitudeCardinalAscii*

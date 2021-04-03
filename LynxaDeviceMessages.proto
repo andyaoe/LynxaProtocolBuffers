@@ -4,9 +4,6 @@ import "nanopb.proto";
 
 message GnggaMessage_100
 {
-	required uint32 timeHours = 1; 
-	required uint32 timeMinutes = 2; 
-	required uint32 timeSeconds = 3; 
 	required float latitudeMinutes = 4; 
 	required uint32 latitudeDegrees = 5; 
 	required uint32 latitudeCardinalAscii = 6; 

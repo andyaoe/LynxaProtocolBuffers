@@ -11,9 +11,6 @@
 
 /* Struct definitions */
 typedef struct _GnggaMessage_100 {
-    uint32_t timeHours;
-    uint32_t timeMinutes;
-    uint32_t timeSeconds;
     float latitudeMinutes;
     uint32_t latitudeDegrees;
     uint32_t latitudeCardinalAscii;
@@ -48,21 +45,18 @@ extern "C" {
 #endif
 
 /* Initializer values for message structs */
-#define GnggaMessage_100_init_default            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define GnggaMessage_100_init_default            {0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_default              {0, ""}
 #define WifiStation_init_default                 {{0}, 0}
 #define WifiStationList_102_init_default         {0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
 #define ModemParameters_103_init_default         {""}
-#define GnggaMessage_100_init_zero               {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define GnggaMessage_100_init_zero               {0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_zero                 {0, ""}
 #define WifiStation_init_zero                    {{0}, 0}
 #define WifiStationList_102_init_zero            {0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
 #define ModemParameters_103_init_zero            {""}
 
 /* Field tags (for use in manual encoding/decoding) */
-#define GnggaMessage_100_timeHours_tag           1
-#define GnggaMessage_100_timeMinutes_tag         2
-#define GnggaMessage_100_timeSeconds_tag         3
 #define GnggaMessage_100_latitudeMinutes_tag     4
 #define GnggaMessage_100_latitudeDegrees_tag     5
 #define GnggaMessage_100_latitudeCardinalAscii_tag 6
@@ -79,9 +73,6 @@ extern "C" {
 
 /* Struct field encoding specification for nanopb */
 #define GnggaMessage_100_FIELDLIST(X, a) \
-X(a, STATIC,   REQUIRED, UINT32,   timeHours,         1) \
-X(a, STATIC,   REQUIRED, UINT32,   timeMinutes,       2) \
-X(a, STATIC,   REQUIRED, UINT32,   timeSeconds,       3) \
 X(a, STATIC,   REQUIRED, FLOAT,    latitudeMinutes,   4) \
 X(a, STATIC,   REQUIRED, UINT32,   latitudeDegrees,   5) \
 X(a, STATIC,   REQUIRED, UINT32,   latitudeCardinalAscii,   6) \
@@ -129,7 +120,7 @@ extern const pb_msgdesc_t ModemParameters_103_msg;
 #define ModemParameters_103_fields &ModemParameters_103_msg
 
 /* Maximum encoded size of messages (where known) */
-#define GnggaMessage_100_size                    58
+#define GnggaMessage_100_size                    40
 #define LogMessage_101_size                      137
 #define WifiStation_size                         19
 #define WifiStationList_102_size                 252
