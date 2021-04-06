@@ -11,6 +11,7 @@
 
 /* Struct definitions */
 typedef struct _GnggaMessage_100 {
+    uint32_t epochTime;
     float latitudeMinutes;
     uint32_t latitudeDegrees;
     uint32_t latitudeCardinalAscii;
@@ -21,11 +22,12 @@ typedef struct _GnggaMessage_100 {
 } GnggaMessage_100;
 
 typedef struct _LogMessage_101 {
-    uint32_t timestamp;
+    uint32_t epochTime;
     char logMessage[129];
 } LogMessage_101;
 
 typedef struct _ModemParameters_103 {
+    uint32_t epochTime;
     char cell_id[17];
 } ModemParameters_103;
 
@@ -35,6 +37,8 @@ typedef struct _WifiStation {
 } WifiStation;
 
 typedef struct _WifiStationList_102 {
+    uint32_t epochTime;
+    uint32_t numberStationFound;
     pb_size_t wifiStations_count;
     WifiStation wifiStations[12];
 } WifiStationList_102;
@@ -45,18 +49,19 @@ extern "C" {
 #endif
 
 /* Initializer values for message structs */
-#define GnggaMessage_100_init_default            {0, 0, 0, 0, 0, 0, 0}
+#define GnggaMessage_100_init_default            {0, 0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_default              {0, ""}
 #define WifiStation_init_default                 {{0}, 0}
-#define WifiStationList_102_init_default         {0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
-#define ModemParameters_103_init_default         {""}
-#define GnggaMessage_100_init_zero               {0, 0, 0, 0, 0, 0, 0}
+#define WifiStationList_102_init_default         {0, 0, 0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
+#define ModemParameters_103_init_default         {0, ""}
+#define GnggaMessage_100_init_zero               {0, 0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_zero                 {0, ""}
 #define WifiStation_init_zero                    {{0}, 0}
-#define WifiStationList_102_init_zero            {0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
-#define ModemParameters_103_init_zero            {""}
+#define WifiStationList_102_init_zero            {0, 0, 0, {WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero, WifiStation_init_zero}}
+#define ModemParameters_103_init_zero            {0, ""}
 
 /* Field tags (for use in manual encoding/decoding) */
+#define GnggaMessage_100_epochTime_tag           1
 #define GnggaMessage_100_latitudeMinutes_tag     4
 #define GnggaMessage_100_latitudeDegrees_tag     5
 #define GnggaMessage_100_latitudeCardinalAscii_tag 6
@@ -64,15 +69,19 @@ extern "C" {
 #define GnggaMessage_100_longitudeDegrees_tag    8
 #define GnggaMessage_100_longitudeCardinalAscii_tag 9
 #define GnggaMessage_100_numberOfSatellitesInUse_tag 10
-#define LogMessage_101_timestamp_tag             1
+#define LogMessage_101_epochTime_tag             1
 #define LogMessage_101_logMessage_tag            2
-#define ModemParameters_103_cell_id_tag          1
+#define ModemParameters_103_epochTime_tag        1
+#define ModemParameters_103_cell_id_tag          2
 #define WifiStation_bssid_tag                    1
 #define WifiStation_rssi_tag                     2
-#define WifiStationList_102_wifiStations_tag     1
+#define WifiStationList_102_epochTime_tag        1
+#define WifiStationList_102_numberStationFound_tag 2
+#define WifiStationList_102_wifiStations_tag     3
 
 /* Struct field encoding specification for nanopb */
 #define GnggaMessage_100_FIELDLIST(X, a) \
+X(a, STATIC,   REQUIRED, UINT32,   epochTime,         1) \
 X(a, STATIC,   REQUIRED, FLOAT,    latitudeMinutes,   4) \
 X(a, STATIC,   REQUIRED, UINT32,   latitudeDegrees,   5) \
 X(a, STATIC,   REQUIRED, UINT32,   latitudeCardinalAscii,   6) \
@@ -84,7 +93,7 @@ X(a, STATIC,   REQUIRED, UINT32,   numberOfSatellitesInUse,  10)
 #define GnggaMessage_100_DEFAULT NULL
 
 #define LogMessage_101_FIELDLIST(X, a) \
-X(a, STATIC,   REQUIRED, UINT32,   timestamp,         1) \
+X(a, STATIC,   REQUIRED, UINT32,   epochTime,         1) \
 X(a, STATIC,   REQUIRED, STRING,   logMessage,        2)
 #define LogMessage_101_CALLBACK NULL
 #define LogMessage_101_DEFAULT NULL
@@ -96,13 +105,16 @@ X(a, STATIC,   REQUIRED, INT32,    rssi,              2)
 #define WifiStation_DEFAULT NULL
 
 #define WifiStationList_102_FIELDLIST(X, a) \
-X(a, STATIC,   REPEATED, MESSAGE,  wifiStations,      1)
+X(a, STATIC,   REQUIRED, UINT32,   epochTime,         1) \
+X(a, STATIC,   REQUIRED, UINT32,   numberStationFound,   2) \
+X(a, STATIC,   REPEATED, MESSAGE,  wifiStations,      3)
 #define WifiStationList_102_CALLBACK NULL
 #define WifiStationList_102_DEFAULT NULL
 #define WifiStationList_102_wifiStations_MSGTYPE WifiStation
 
 #define ModemParameters_103_FIELDLIST(X, a) \
-X(a, STATIC,   REQUIRED, STRING,   cell_id,           1)
+X(a, STATIC,   REQUIRED, UINT32,   epochTime,         1) \
+X(a, STATIC,   REQUIRED, STRING,   cell_id,           2)
 #define ModemParameters_103_CALLBACK NULL
 #define ModemParameters_103_DEFAULT NULL
 
@@ -120,11 +132,11 @@ extern const pb_msgdesc_t ModemParameters_103_msg;
 #define ModemParameters_103_fields &ModemParameters_103_msg
 
 /* Maximum encoded size of messages (where known) */
-#define GnggaMessage_100_size                    40
+#define GnggaMessage_100_size                    46
 #define LogMessage_101_size                      137
 #define WifiStation_size                         19
-#define WifiStationList_102_size                 252
-#define ModemParameters_103_size                 18
+#define WifiStationList_102_size                 264
+#define ModemParameters_103_size                 24
 
 #ifdef __cplusplus
 } /* extern "C" */

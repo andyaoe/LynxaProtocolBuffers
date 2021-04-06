@@ -22,27 +22,27 @@ public static partial class LynxaDeviceMessagesReflection {
   static LynxaDeviceMessagesReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8ilQIK",
-          "EEduZ2dhTWVzc2FnZV8xMDASEQoJdGltZUhvdXJzGAEgAigNEhMKC3RpbWVN",
-          "aW51dGVzGAIgAigNEhMKC3RpbWVTZWNvbmRzGAMgAigNEhcKD2xhdGl0dWRl",
-          "TWludXRlcxgEIAIoAhIXCg9sYXRpdHVkZURlZ3JlZXMYBSACKA0SHQoVbGF0",
-          "aXR1ZGVDYXJkaW5hbEFzY2lpGAYgAigNEhgKEGxvbmdpdHVkZU1pbnV0ZXMY",
-          "ByACKAISGAoQbG9uZ2l0dWRlRGVncmVlcxgIIAIoDRIeChZsb25naXR1ZGVD",
-          "YXJkaW5hbEFzY2lpGAkgAigNEh8KF251bWJlck9mU2F0ZWxsaXRlc0luVXNl",
-          "GAogAigNIj8KDkxvZ01lc3NhZ2VfMTAxEhEKCXRpbWVzdGFtcBgBIAIoDRIa",
-          "Cgpsb2dNZXNzYWdlGAIgAigJQgaSPwNwgAEiNgoLV2lmaVN0YXRpb24SGQoF",
-          "YnNzaWQYASACKAxCCpI/AggGkj8CeAESDAoEcnNzaRgCIAIoBSJAChNXaWZp",
-          "U3RhdGlvbkxpc3RfMTAyEikKDHdpZmlTdGF0aW9ucxgBIAMoCzIMLldpZmlT",
-          "dGF0aW9uQgWSPwIQDCItChNNb2RlbVBhcmFtZXRlcnNfMTAzEhYKB2NlbGxf",
-          "aWQYASACKAlCBZI/AnAQ"));
+          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8i6wEK",
+          "EEduZ2dhTWVzc2FnZV8xMDASEQoJZXBvY2hUaW1lGAEgAigNEhcKD2xhdGl0",
+          "dWRlTWludXRlcxgEIAIoAhIXCg9sYXRpdHVkZURlZ3JlZXMYBSACKA0SHQoV",
+          "bGF0aXR1ZGVDYXJkaW5hbEFzY2lpGAYgAigNEhgKEGxvbmdpdHVkZU1pbnV0",
+          "ZXMYByACKAISGAoQbG9uZ2l0dWRlRGVncmVlcxgIIAIoDRIeChZsb25naXR1",
+          "ZGVDYXJkaW5hbEFzY2lpGAkgAigNEh8KF251bWJlck9mU2F0ZWxsaXRlc0lu",
+          "VXNlGAogAigNIj8KDkxvZ01lc3NhZ2VfMTAxEhEKCWVwb2NoVGltZRgBIAIo",
+          "DRIaCgpsb2dNZXNzYWdlGAIgAigJQgaSPwNwgAEiNgoLV2lmaVN0YXRpb24S",
+          "GQoFYnNzaWQYASACKAxCCpI/AggGkj8CeAESDAoEcnNzaRgCIAIoBSJvChNX",
+          "aWZpU3RhdGlvbkxpc3RfMTAyEhEKCWVwb2NoVGltZRgBIAIoDRIaChJudW1i",
+          "ZXJTdGF0aW9uRm91bmQYAiACKA0SKQoMd2lmaVN0YXRpb25zGAMgAygLMgwu",
+          "V2lmaVN0YXRpb25CBZI/AhAMIkAKE01vZGVtUGFyYW1ldGVyc18xMDMSEQoJ",
+          "ZXBvY2hUaW1lGAEgAigNEhYKB2NlbGxfaWQYAiACKAlCBZI/AnAQ"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::GnggaMessage_100), global::GnggaMessage_100.Parser, new[]{ "TimeHours", "TimeMinutes", "TimeSeconds", "LatitudeMinutes", "LatitudeDegrees", "LatitudeCardinalAscii", "LongitudeMinutes", "LongitudeDegrees", "LongitudeCardinalAscii", "NumberOfSatellitesInUse" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::LogMessage_101), global::LogMessage_101.Parser, new[]{ "Timestamp", "LogMessage" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::GnggaMessage_100), global::GnggaMessage_100.Parser, new[]{ "EpochTime", "LatitudeMinutes", "LatitudeDegrees", "LatitudeCardinalAscii", "LongitudeMinutes", "LongitudeDegrees", "LongitudeCardinalAscii", "NumberOfSatellitesInUse" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::LogMessage_101), global::LogMessage_101.Parser, new[]{ "EpochTime", "LogMessage" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::WifiStation), global::WifiStation.Parser, new[]{ "Bssid", "Rssi" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::WifiStationList_102), global::WifiStationList_102.Parser, new[]{ "WifiStations" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::ModemParameters_103), global::ModemParameters_103.Parser, new[]{ "CellId" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::WifiStationList_102), global::WifiStationList_102.Parser, new[]{ "EpochTime", "NumberStationFound", "WifiStations" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::ModemParameters_103), global::ModemParameters_103.Parser, new[]{ "EpochTime", "CellId" }, null, null, null, null)
         }));
   }
   #endregion
@@ -80,9 +80,7 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public GnggaMessage_100(GnggaMessage_100 other) : this() {
     _hasBits0 = other._hasBits0;
-    timeHours_ = other.timeHours_;
-    timeMinutes_ = other.timeMinutes_;
-    timeSeconds_ = other.timeSeconds_;
+    epochTime_ = other.epochTime_;
     latitudeMinutes_ = other.latitudeMinutes_;
     latitudeDegrees_ = other.latitudeDegrees_;
     latitudeCardinalAscii_ = other.latitudeCardinalAscii_;
@@ -98,76 +96,28 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
     return new GnggaMessage_100(this);
   }
 
-  /// <summary>Field number for the "timeHours" field.</summary>
-  public const int TimeHoursFieldNumber = 1;
-  private readonly static uint TimeHoursDefaultValue = 0;
+  /// <summary>Field number for the "epochTime" field.</summary>
+  public const int EpochTimeFieldNumber = 1;
+  private readonly static uint EpochTimeDefaultValue = 0;
 
-  private uint timeHours_;
+  private uint epochTime_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public uint TimeHours {
-    get { if ((_hasBits0 & 1) != 0) { return timeHours_; } else { return TimeHoursDefaultValue; } }
+  public uint EpochTime {
+    get { if ((_hasBits0 & 1) != 0) { return epochTime_; } else { return EpochTimeDefaultValue; } }
     set {
       _hasBits0 |= 1;
-      timeHours_ = value;
+      epochTime_ = value;
     }
   }
-  /// <summary>Gets whether the "timeHours" field is set</summary>
+  /// <summary>Gets whether the "epochTime" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasTimeHours {
+  public bool HasEpochTime {
     get { return (_hasBits0 & 1) != 0; }
   }
-  /// <summary>Clears the value of the "timeHours" field</summary>
+  /// <summary>Clears the value of the "epochTime" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearTimeHours() {
+  public void ClearEpochTime() {
     _hasBits0 &= ~1;
-  }
-
-  /// <summary>Field number for the "timeMinutes" field.</summary>
-  public const int TimeMinutesFieldNumber = 2;
-  private readonly static uint TimeMinutesDefaultValue = 0;
-
-  private uint timeMinutes_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public uint TimeMinutes {
-    get { if ((_hasBits0 & 2) != 0) { return timeMinutes_; } else { return TimeMinutesDefaultValue; } }
-    set {
-      _hasBits0 |= 2;
-      timeMinutes_ = value;
-    }
-  }
-  /// <summary>Gets whether the "timeMinutes" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasTimeMinutes {
-    get { return (_hasBits0 & 2) != 0; }
-  }
-  /// <summary>Clears the value of the "timeMinutes" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearTimeMinutes() {
-    _hasBits0 &= ~2;
-  }
-
-  /// <summary>Field number for the "timeSeconds" field.</summary>
-  public const int TimeSecondsFieldNumber = 3;
-  private readonly static uint TimeSecondsDefaultValue = 0;
-
-  private uint timeSeconds_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public uint TimeSeconds {
-    get { if ((_hasBits0 & 4) != 0) { return timeSeconds_; } else { return TimeSecondsDefaultValue; } }
-    set {
-      _hasBits0 |= 4;
-      timeSeconds_ = value;
-    }
-  }
-  /// <summary>Gets whether the "timeSeconds" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasTimeSeconds {
-    get { return (_hasBits0 & 4) != 0; }
-  }
-  /// <summary>Clears the value of the "timeSeconds" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearTimeSeconds() {
-    _hasBits0 &= ~4;
   }
 
   /// <summary>Field number for the "latitudeMinutes" field.</summary>
@@ -177,21 +127,21 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   private float latitudeMinutes_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public float LatitudeMinutes {
-    get { if ((_hasBits0 & 8) != 0) { return latitudeMinutes_; } else { return LatitudeMinutesDefaultValue; } }
+    get { if ((_hasBits0 & 2) != 0) { return latitudeMinutes_; } else { return LatitudeMinutesDefaultValue; } }
     set {
-      _hasBits0 |= 8;
+      _hasBits0 |= 2;
       latitudeMinutes_ = value;
     }
   }
   /// <summary>Gets whether the "latitudeMinutes" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public bool HasLatitudeMinutes {
-    get { return (_hasBits0 & 8) != 0; }
+    get { return (_hasBits0 & 2) != 0; }
   }
   /// <summary>Clears the value of the "latitudeMinutes" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public void ClearLatitudeMinutes() {
-    _hasBits0 &= ~8;
+    _hasBits0 &= ~2;
   }
 
   /// <summary>Field number for the "latitudeDegrees" field.</summary>
@@ -201,21 +151,21 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   private uint latitudeDegrees_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public uint LatitudeDegrees {
-    get { if ((_hasBits0 & 16) != 0) { return latitudeDegrees_; } else { return LatitudeDegreesDefaultValue; } }
+    get { if ((_hasBits0 & 4) != 0) { return latitudeDegrees_; } else { return LatitudeDegreesDefaultValue; } }
     set {
-      _hasBits0 |= 16;
+      _hasBits0 |= 4;
       latitudeDegrees_ = value;
     }
   }
   /// <summary>Gets whether the "latitudeDegrees" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public bool HasLatitudeDegrees {
-    get { return (_hasBits0 & 16) != 0; }
+    get { return (_hasBits0 & 4) != 0; }
   }
   /// <summary>Clears the value of the "latitudeDegrees" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public void ClearLatitudeDegrees() {
-    _hasBits0 &= ~16;
+    _hasBits0 &= ~4;
   }
 
   /// <summary>Field number for the "latitudeCardinalAscii" field.</summary>
@@ -225,21 +175,21 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   private uint latitudeCardinalAscii_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public uint LatitudeCardinalAscii {
-    get { if ((_hasBits0 & 32) != 0) { return latitudeCardinalAscii_; } else { return LatitudeCardinalAsciiDefaultValue; } }
+    get { if ((_hasBits0 & 8) != 0) { return latitudeCardinalAscii_; } else { return LatitudeCardinalAsciiDefaultValue; } }
     set {
-      _hasBits0 |= 32;
+      _hasBits0 |= 8;
       latitudeCardinalAscii_ = value;
     }
   }
   /// <summary>Gets whether the "latitudeCardinalAscii" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public bool HasLatitudeCardinalAscii {
-    get { return (_hasBits0 & 32) != 0; }
+    get { return (_hasBits0 & 8) != 0; }
   }
   /// <summary>Clears the value of the "latitudeCardinalAscii" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public void ClearLatitudeCardinalAscii() {
-    _hasBits0 &= ~32;
+    _hasBits0 &= ~8;
   }
 
   /// <summary>Field number for the "longitudeMinutes" field.</summary>
@@ -249,21 +199,21 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   private float longitudeMinutes_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public float LongitudeMinutes {
-    get { if ((_hasBits0 & 64) != 0) { return longitudeMinutes_; } else { return LongitudeMinutesDefaultValue; } }
+    get { if ((_hasBits0 & 16) != 0) { return longitudeMinutes_; } else { return LongitudeMinutesDefaultValue; } }
     set {
-      _hasBits0 |= 64;
+      _hasBits0 |= 16;
       longitudeMinutes_ = value;
     }
   }
   /// <summary>Gets whether the "longitudeMinutes" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public bool HasLongitudeMinutes {
-    get { return (_hasBits0 & 64) != 0; }
+    get { return (_hasBits0 & 16) != 0; }
   }
   /// <summary>Clears the value of the "longitudeMinutes" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public void ClearLongitudeMinutes() {
-    _hasBits0 &= ~64;
+    _hasBits0 &= ~16;
   }
 
   /// <summary>Field number for the "longitudeDegrees" field.</summary>
@@ -273,21 +223,21 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   private uint longitudeDegrees_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public uint LongitudeDegrees {
-    get { if ((_hasBits0 & 128) != 0) { return longitudeDegrees_; } else { return LongitudeDegreesDefaultValue; } }
+    get { if ((_hasBits0 & 32) != 0) { return longitudeDegrees_; } else { return LongitudeDegreesDefaultValue; } }
     set {
-      _hasBits0 |= 128;
+      _hasBits0 |= 32;
       longitudeDegrees_ = value;
     }
   }
   /// <summary>Gets whether the "longitudeDegrees" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public bool HasLongitudeDegrees {
-    get { return (_hasBits0 & 128) != 0; }
+    get { return (_hasBits0 & 32) != 0; }
   }
   /// <summary>Clears the value of the "longitudeDegrees" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public void ClearLongitudeDegrees() {
-    _hasBits0 &= ~128;
+    _hasBits0 &= ~32;
   }
 
   /// <summary>Field number for the "longitudeCardinalAscii" field.</summary>
@@ -297,21 +247,21 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   private uint longitudeCardinalAscii_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public uint LongitudeCardinalAscii {
-    get { if ((_hasBits0 & 256) != 0) { return longitudeCardinalAscii_; } else { return LongitudeCardinalAsciiDefaultValue; } }
+    get { if ((_hasBits0 & 64) != 0) { return longitudeCardinalAscii_; } else { return LongitudeCardinalAsciiDefaultValue; } }
     set {
-      _hasBits0 |= 256;
+      _hasBits0 |= 64;
       longitudeCardinalAscii_ = value;
     }
   }
   /// <summary>Gets whether the "longitudeCardinalAscii" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public bool HasLongitudeCardinalAscii {
-    get { return (_hasBits0 & 256) != 0; }
+    get { return (_hasBits0 & 64) != 0; }
   }
   /// <summary>Clears the value of the "longitudeCardinalAscii" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public void ClearLongitudeCardinalAscii() {
-    _hasBits0 &= ~256;
+    _hasBits0 &= ~64;
   }
 
   /// <summary>Field number for the "numberOfSatellitesInUse" field.</summary>
@@ -321,21 +271,21 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   private uint numberOfSatellitesInUse_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public uint NumberOfSatellitesInUse {
-    get { if ((_hasBits0 & 512) != 0) { return numberOfSatellitesInUse_; } else { return NumberOfSatellitesInUseDefaultValue; } }
+    get { if ((_hasBits0 & 128) != 0) { return numberOfSatellitesInUse_; } else { return NumberOfSatellitesInUseDefaultValue; } }
     set {
-      _hasBits0 |= 512;
+      _hasBits0 |= 128;
       numberOfSatellitesInUse_ = value;
     }
   }
   /// <summary>Gets whether the "numberOfSatellitesInUse" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public bool HasNumberOfSatellitesInUse {
-    get { return (_hasBits0 & 512) != 0; }
+    get { return (_hasBits0 & 128) != 0; }
   }
   /// <summary>Clears the value of the "numberOfSatellitesInUse" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public void ClearNumberOfSatellitesInUse() {
-    _hasBits0 &= ~512;
+    _hasBits0 &= ~128;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -351,9 +301,7 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
     if (ReferenceEquals(other, this)) {
       return true;
     }
-    if (TimeHours != other.TimeHours) return false;
-    if (TimeMinutes != other.TimeMinutes) return false;
-    if (TimeSeconds != other.TimeSeconds) return false;
+    if (EpochTime != other.EpochTime) return false;
     if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(LatitudeMinutes, other.LatitudeMinutes)) return false;
     if (LatitudeDegrees != other.LatitudeDegrees) return false;
     if (LatitudeCardinalAscii != other.LatitudeCardinalAscii) return false;
@@ -367,9 +315,7 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override int GetHashCode() {
     int hash = 1;
-    if (HasTimeHours) hash ^= TimeHours.GetHashCode();
-    if (HasTimeMinutes) hash ^= TimeMinutes.GetHashCode();
-    if (HasTimeSeconds) hash ^= TimeSeconds.GetHashCode();
+    if (HasEpochTime) hash ^= EpochTime.GetHashCode();
     if (HasLatitudeMinutes) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LatitudeMinutes);
     if (HasLatitudeDegrees) hash ^= LatitudeDegrees.GetHashCode();
     if (HasLatitudeCardinalAscii) hash ^= LatitudeCardinalAscii.GetHashCode();
@@ -393,17 +339,9 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (HasTimeHours) {
+    if (HasEpochTime) {
       output.WriteRawTag(8);
-      output.WriteUInt32(TimeHours);
-    }
-    if (HasTimeMinutes) {
-      output.WriteRawTag(16);
-      output.WriteUInt32(TimeMinutes);
-    }
-    if (HasTimeSeconds) {
-      output.WriteRawTag(24);
-      output.WriteUInt32(TimeSeconds);
+      output.WriteUInt32(EpochTime);
     }
     if (HasLatitudeMinutes) {
       output.WriteRawTag(37);
@@ -442,17 +380,9 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (HasTimeHours) {
+    if (HasEpochTime) {
       output.WriteRawTag(8);
-      output.WriteUInt32(TimeHours);
-    }
-    if (HasTimeMinutes) {
-      output.WriteRawTag(16);
-      output.WriteUInt32(TimeMinutes);
-    }
-    if (HasTimeSeconds) {
-      output.WriteRawTag(24);
-      output.WriteUInt32(TimeSeconds);
+      output.WriteUInt32(EpochTime);
     }
     if (HasLatitudeMinutes) {
       output.WriteRawTag(37);
@@ -491,14 +421,8 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public int CalculateSize() {
     int size = 0;
-    if (HasTimeHours) {
-      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TimeHours);
-    }
-    if (HasTimeMinutes) {
-      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TimeMinutes);
-    }
-    if (HasTimeSeconds) {
-      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TimeSeconds);
+    if (HasEpochTime) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EpochTime);
     }
     if (HasLatitudeMinutes) {
       size += 1 + 4;
@@ -532,14 +456,8 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
     if (other == null) {
       return;
     }
-    if (other.HasTimeHours) {
-      TimeHours = other.TimeHours;
-    }
-    if (other.HasTimeMinutes) {
-      TimeMinutes = other.TimeMinutes;
-    }
-    if (other.HasTimeSeconds) {
-      TimeSeconds = other.TimeSeconds;
+    if (other.HasEpochTime) {
+      EpochTime = other.EpochTime;
     }
     if (other.HasLatitudeMinutes) {
       LatitudeMinutes = other.LatitudeMinutes;
@@ -577,15 +495,7 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 8: {
-          TimeHours = input.ReadUInt32();
-          break;
-        }
-        case 16: {
-          TimeMinutes = input.ReadUInt32();
-          break;
-        }
-        case 24: {
-          TimeSeconds = input.ReadUInt32();
+          EpochTime = input.ReadUInt32();
           break;
         }
         case 37: {
@@ -631,15 +541,7 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 8: {
-          TimeHours = input.ReadUInt32();
-          break;
-        }
-        case 16: {
-          TimeMinutes = input.ReadUInt32();
-          break;
-        }
-        case 24: {
-          TimeSeconds = input.ReadUInt32();
+          EpochTime = input.ReadUInt32();
           break;
         }
         case 37: {
@@ -708,7 +610,7 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public LogMessage_101(LogMessage_101 other) : this() {
     _hasBits0 = other._hasBits0;
-    timestamp_ = other.timestamp_;
+    epochTime_ = other.epochTime_;
     logMessage_ = other.logMessage_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
@@ -718,27 +620,27 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
     return new LogMessage_101(this);
   }
 
-  /// <summary>Field number for the "timestamp" field.</summary>
-  public const int TimestampFieldNumber = 1;
-  private readonly static uint TimestampDefaultValue = 0;
+  /// <summary>Field number for the "epochTime" field.</summary>
+  public const int EpochTimeFieldNumber = 1;
+  private readonly static uint EpochTimeDefaultValue = 0;
 
-  private uint timestamp_;
+  private uint epochTime_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public uint Timestamp {
-    get { if ((_hasBits0 & 1) != 0) { return timestamp_; } else { return TimestampDefaultValue; } }
+  public uint EpochTime {
+    get { if ((_hasBits0 & 1) != 0) { return epochTime_; } else { return EpochTimeDefaultValue; } }
     set {
       _hasBits0 |= 1;
-      timestamp_ = value;
+      epochTime_ = value;
     }
   }
-  /// <summary>Gets whether the "timestamp" field is set</summary>
+  /// <summary>Gets whether the "epochTime" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasTimestamp {
+  public bool HasEpochTime {
     get { return (_hasBits0 & 1) != 0; }
   }
-  /// <summary>Clears the value of the "timestamp" field</summary>
+  /// <summary>Clears the value of the "epochTime" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearTimestamp() {
+  public void ClearEpochTime() {
     _hasBits0 &= ~1;
   }
 
@@ -778,7 +680,7 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
     if (ReferenceEquals(other, this)) {
       return true;
     }
-    if (Timestamp != other.Timestamp) return false;
+    if (EpochTime != other.EpochTime) return false;
     if (LogMessage != other.LogMessage) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
@@ -786,7 +688,7 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override int GetHashCode() {
     int hash = 1;
-    if (HasTimestamp) hash ^= Timestamp.GetHashCode();
+    if (HasEpochTime) hash ^= EpochTime.GetHashCode();
     if (HasLogMessage) hash ^= LogMessage.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -804,9 +706,9 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (HasTimestamp) {
+    if (HasEpochTime) {
       output.WriteRawTag(8);
-      output.WriteUInt32(Timestamp);
+      output.WriteUInt32(EpochTime);
     }
     if (HasLogMessage) {
       output.WriteRawTag(18);
@@ -821,9 +723,9 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (HasTimestamp) {
+    if (HasEpochTime) {
       output.WriteRawTag(8);
-      output.WriteUInt32(Timestamp);
+      output.WriteUInt32(EpochTime);
     }
     if (HasLogMessage) {
       output.WriteRawTag(18);
@@ -838,8 +740,8 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public int CalculateSize() {
     int size = 0;
-    if (HasTimestamp) {
-      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Timestamp);
+    if (HasEpochTime) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EpochTime);
     }
     if (HasLogMessage) {
       size += 1 + pb::CodedOutputStream.ComputeStringSize(LogMessage);
@@ -855,8 +757,8 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
     if (other == null) {
       return;
     }
-    if (other.HasTimestamp) {
-      Timestamp = other.Timestamp;
+    if (other.HasEpochTime) {
+      EpochTime = other.EpochTime;
     }
     if (other.HasLogMessage) {
       LogMessage = other.LogMessage;
@@ -876,7 +778,7 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 8: {
-          Timestamp = input.ReadUInt32();
+          EpochTime = input.ReadUInt32();
           break;
         }
         case 18: {
@@ -898,7 +800,7 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 8: {
-          Timestamp = input.ReadUInt32();
+          EpochTime = input.ReadUInt32();
           break;
         }
         case 18: {
@@ -1154,6 +1056,7 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
 {
   private static readonly pb::MessageParser<WifiStationList_102> _parser = new pb::MessageParser<WifiStationList_102>(() => new WifiStationList_102());
   private pb::UnknownFieldSet _unknownFields;
+  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pb::MessageParser<WifiStationList_102> Parser { get { return _parser; } }
 
@@ -1176,6 +1079,9 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public WifiStationList_102(WifiStationList_102 other) : this() {
+    _hasBits0 = other._hasBits0;
+    epochTime_ = other.epochTime_;
+    numberStationFound_ = other.numberStationFound_;
     wifiStations_ = other.wifiStations_.Clone();
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
@@ -1185,10 +1091,58 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
     return new WifiStationList_102(this);
   }
 
+  /// <summary>Field number for the "epochTime" field.</summary>
+  public const int EpochTimeFieldNumber = 1;
+  private readonly static uint EpochTimeDefaultValue = 0;
+
+  private uint epochTime_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public uint EpochTime {
+    get { if ((_hasBits0 & 1) != 0) { return epochTime_; } else { return EpochTimeDefaultValue; } }
+    set {
+      _hasBits0 |= 1;
+      epochTime_ = value;
+    }
+  }
+  /// <summary>Gets whether the "epochTime" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasEpochTime {
+    get { return (_hasBits0 & 1) != 0; }
+  }
+  /// <summary>Clears the value of the "epochTime" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearEpochTime() {
+    _hasBits0 &= ~1;
+  }
+
+  /// <summary>Field number for the "numberStationFound" field.</summary>
+  public const int NumberStationFoundFieldNumber = 2;
+  private readonly static uint NumberStationFoundDefaultValue = 0;
+
+  private uint numberStationFound_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public uint NumberStationFound {
+    get { if ((_hasBits0 & 2) != 0) { return numberStationFound_; } else { return NumberStationFoundDefaultValue; } }
+    set {
+      _hasBits0 |= 2;
+      numberStationFound_ = value;
+    }
+  }
+  /// <summary>Gets whether the "numberStationFound" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasNumberStationFound {
+    get { return (_hasBits0 & 2) != 0; }
+  }
+  /// <summary>Clears the value of the "numberStationFound" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearNumberStationFound() {
+    _hasBits0 &= ~2;
+  }
+
   /// <summary>Field number for the "wifiStations" field.</summary>
-  public const int WifiStationsFieldNumber = 1;
+  public const int WifiStationsFieldNumber = 3;
   private static readonly pb::FieldCodec<global::WifiStation> _repeated_wifiStations_codec
-      = pb::FieldCodec.ForMessage(10, global::WifiStation.Parser);
+      = pb::FieldCodec.ForMessage(26, global::WifiStation.Parser);
   private readonly pbc::RepeatedField<global::WifiStation> wifiStations_ = new pbc::RepeatedField<global::WifiStation>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public pbc::RepeatedField<global::WifiStation> WifiStations {
@@ -1208,6 +1162,8 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
     if (ReferenceEquals(other, this)) {
       return true;
     }
+    if (EpochTime != other.EpochTime) return false;
+    if (NumberStationFound != other.NumberStationFound) return false;
     if(!wifiStations_.Equals(other.wifiStations_)) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
@@ -1215,6 +1171,8 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override int GetHashCode() {
     int hash = 1;
+    if (HasEpochTime) hash ^= EpochTime.GetHashCode();
+    if (HasNumberStationFound) hash ^= NumberStationFound.GetHashCode();
     hash ^= wifiStations_.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -1232,6 +1190,14 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
+    if (HasEpochTime) {
+      output.WriteRawTag(8);
+      output.WriteUInt32(EpochTime);
+    }
+    if (HasNumberStationFound) {
+      output.WriteRawTag(16);
+      output.WriteUInt32(NumberStationFound);
+    }
     wifiStations_.WriteTo(output, _repeated_wifiStations_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -1242,6 +1208,14 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (HasEpochTime) {
+      output.WriteRawTag(8);
+      output.WriteUInt32(EpochTime);
+    }
+    if (HasNumberStationFound) {
+      output.WriteRawTag(16);
+      output.WriteUInt32(NumberStationFound);
+    }
     wifiStations_.WriteTo(ref output, _repeated_wifiStations_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -1252,6 +1226,12 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public int CalculateSize() {
     int size = 0;
+    if (HasEpochTime) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EpochTime);
+    }
+    if (HasNumberStationFound) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NumberStationFound);
+    }
     size += wifiStations_.CalculateSize(_repeated_wifiStations_codec);
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -1263,6 +1243,12 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
   public void MergeFrom(WifiStationList_102 other) {
     if (other == null) {
       return;
+    }
+    if (other.HasEpochTime) {
+      EpochTime = other.EpochTime;
+    }
+    if (other.HasNumberStationFound) {
+      NumberStationFound = other.NumberStationFound;
     }
     wifiStations_.Add(other.wifiStations_);
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1279,7 +1265,15 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
         default:
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
-        case 10: {
+        case 8: {
+          EpochTime = input.ReadUInt32();
+          break;
+        }
+        case 16: {
+          NumberStationFound = input.ReadUInt32();
+          break;
+        }
+        case 26: {
           wifiStations_.AddEntriesFrom(input, _repeated_wifiStations_codec);
           break;
         }
@@ -1297,7 +1291,15 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
         default:
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
-        case 10: {
+        case 8: {
+          EpochTime = input.ReadUInt32();
+          break;
+        }
+        case 16: {
+          NumberStationFound = input.ReadUInt32();
+          break;
+        }
+        case 26: {
           wifiStations_.AddEntriesFrom(ref input, _repeated_wifiStations_codec);
           break;
         }
@@ -1315,6 +1317,7 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
 {
   private static readonly pb::MessageParser<ModemParameters_103> _parser = new pb::MessageParser<ModemParameters_103>(() => new ModemParameters_103());
   private pb::UnknownFieldSet _unknownFields;
+  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pb::MessageParser<ModemParameters_103> Parser { get { return _parser; } }
 
@@ -1337,6 +1340,8 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public ModemParameters_103(ModemParameters_103 other) : this() {
+    _hasBits0 = other._hasBits0;
+    epochTime_ = other.epochTime_;
     cellId_ = other.cellId_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
@@ -1346,8 +1351,32 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
     return new ModemParameters_103(this);
   }
 
+  /// <summary>Field number for the "epochTime" field.</summary>
+  public const int EpochTimeFieldNumber = 1;
+  private readonly static uint EpochTimeDefaultValue = 0;
+
+  private uint epochTime_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public uint EpochTime {
+    get { if ((_hasBits0 & 1) != 0) { return epochTime_; } else { return EpochTimeDefaultValue; } }
+    set {
+      _hasBits0 |= 1;
+      epochTime_ = value;
+    }
+  }
+  /// <summary>Gets whether the "epochTime" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasEpochTime {
+    get { return (_hasBits0 & 1) != 0; }
+  }
+  /// <summary>Clears the value of the "epochTime" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearEpochTime() {
+    _hasBits0 &= ~1;
+  }
+
   /// <summary>Field number for the "cell_id" field.</summary>
-  public const int CellIdFieldNumber = 1;
+  public const int CellIdFieldNumber = 2;
   private readonly static string CellIdDefaultValue = "";
 
   private string cellId_;
@@ -1382,6 +1411,7 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
     if (ReferenceEquals(other, this)) {
       return true;
     }
+    if (EpochTime != other.EpochTime) return false;
     if (CellId != other.CellId) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
@@ -1389,6 +1419,7 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override int GetHashCode() {
     int hash = 1;
+    if (HasEpochTime) hash ^= EpochTime.GetHashCode();
     if (HasCellId) hash ^= CellId.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -1406,8 +1437,12 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
+    if (HasEpochTime) {
+      output.WriteRawTag(8);
+      output.WriteUInt32(EpochTime);
+    }
     if (HasCellId) {
-      output.WriteRawTag(10);
+      output.WriteRawTag(18);
       output.WriteString(CellId);
     }
     if (_unknownFields != null) {
@@ -1419,8 +1454,12 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (HasEpochTime) {
+      output.WriteRawTag(8);
+      output.WriteUInt32(EpochTime);
+    }
     if (HasCellId) {
-      output.WriteRawTag(10);
+      output.WriteRawTag(18);
       output.WriteString(CellId);
     }
     if (_unknownFields != null) {
@@ -1432,6 +1471,9 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public int CalculateSize() {
     int size = 0;
+    if (HasEpochTime) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EpochTime);
+    }
     if (HasCellId) {
       size += 1 + pb::CodedOutputStream.ComputeStringSize(CellId);
     }
@@ -1445,6 +1487,9 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
   public void MergeFrom(ModemParameters_103 other) {
     if (other == null) {
       return;
+    }
+    if (other.HasEpochTime) {
+      EpochTime = other.EpochTime;
     }
     if (other.HasCellId) {
       CellId = other.CellId;
@@ -1463,7 +1508,11 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
         default:
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
-        case 10: {
+        case 8: {
+          EpochTime = input.ReadUInt32();
+          break;
+        }
+        case 18: {
           CellId = input.ReadString();
           break;
         }
@@ -1481,7 +1530,11 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
         default:
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
-        case 10: {
+        case 8: {
+          EpochTime = input.ReadUInt32();
+          break;
+        }
+        case 18: {
           CellId = input.ReadString();
           break;
         }

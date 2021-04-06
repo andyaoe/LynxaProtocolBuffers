@@ -1,7 +1,8 @@
 
-¶
-LynxaDeviceMessages.protonanopb.proto"æ
-GnggaMessage_100(
+Á
+LynxaDeviceMessages.protonanopb.proto"„
+GnggaMessage_100
+	epochTime (R	epochTime(
 latitudeMinutes (RlatitudeMinutes(
 latitudeDegrees (RlatitudeDegrees4
 latitudeCardinalAscii (RlatitudeCardinalAscii*
@@ -11,15 +12,18 @@
 numberOfSatellitesInUse
  (RnumberOfSatellitesInUse"V
 LogMessage_101
-	timestamp (R	timestamp&
+	epochTime (R	epochTime&
 
 logMessage (	B’?p€R
 logMessage"C
 WifiStation 
 bssid (B
 ’?’?xRbssid
-rssi (Rrssi"N
-WifiStationList_1027
-wifiStations (2.WifiStationB’?RwifiStations"5
-ModemParameters_103
-cell_id (	B’?pRcellId
+rssi (Rrssi"œ
+WifiStationList_102
+	epochTime (R	epochTime.
+numberStationFound (RnumberStationFound7
+wifiStations (2.WifiStationB’?RwifiStations"S
+ModemParameters_103
+	epochTime (R	epochTime
+cell_id (	B’?pRcellId

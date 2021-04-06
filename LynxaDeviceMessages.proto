@@ -36,5 +36,5 @@ message WifiStationList_102
 message ModemParameters_103
 {
 	required uint32 epochTime = 1;
-	required string cell_id = 1 [(nanopb).max_length = 16];
+	required string cell_id = 2 [(nanopb).max_length = 16];
 }
