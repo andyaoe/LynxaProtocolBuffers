@@ -30,18 +30,18 @@ public static partial class LynxaDeviceMessagesReflection {
           "ZGVDYXJkaW5hbEFzY2lpGAkgAigNEh8KF251bWJlck9mU2F0ZWxsaXRlc0lu",
           "VXNlGAogAigNIj8KDkxvZ01lc3NhZ2VfMTAxEhEKCWVwb2NoVGltZRgBIAIo",
           "DRIaCgpsb2dNZXNzYWdlGAIgAigJQgaSPwNwgAEiNgoLV2lmaVN0YXRpb24S",
-          "GQoFYnNzaWQYASACKAxCCpI/AggGkj8CeAESDAoEcnNzaRgCIAIoBSJvChNX",
-          "aWZpU3RhdGlvbkxpc3RfMTAyEhEKCWVwb2NoVGltZRgBIAIoDRIaChJudW1i",
-          "ZXJTdGF0aW9uRm91bmQYAiACKA0SKQoMd2lmaVN0YXRpb25zGAMgAygLMgwu",
-          "V2lmaVN0YXRpb25CBZI/AhAMIkAKE01vZGVtUGFyYW1ldGVyc18xMDMSEQoJ",
-          "ZXBvY2hUaW1lGAEgAigNEhYKB2NlbGxfaWQYAiACKAlCBZI/AnAQ"));
+          "GQoFYnNzaWQYASACKAxCCpI/AggGkj8CeAESDAoEcnNzaRgCIAIoBSJwChNX",
+          "aWZpU3RhdGlvbkxpc3RfMTAyEhEKCWVwb2NoVGltZRgBIAIoDRIbChNudW1i",
+          "ZXJTdGF0aW9uc0ZvdW5kGAIgAigNEikKDHdpZmlTdGF0aW9ucxgDIAMoCzIM",
+          "LldpZmlTdGF0aW9uQgWSPwIQDCJAChNNb2RlbVBhcmFtZXRlcnNfMTAzEhEK",
+          "CWVwb2NoVGltZRgBIAIoDRIWCgdjZWxsX2lkGAIgAigJQgWSPwJwEA=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::GnggaMessage_100), global::GnggaMessage_100.Parser, new[]{ "EpochTime", "LatitudeMinutes", "LatitudeDegrees", "LatitudeCardinalAscii", "LongitudeMinutes", "LongitudeDegrees", "LongitudeCardinalAscii", "NumberOfSatellitesInUse" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::LogMessage_101), global::LogMessage_101.Parser, new[]{ "EpochTime", "LogMessage" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::WifiStation), global::WifiStation.Parser, new[]{ "Bssid", "Rssi" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::WifiStationList_102), global::WifiStationList_102.Parser, new[]{ "EpochTime", "NumberStationFound", "WifiStations" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::WifiStationList_102), global::WifiStationList_102.Parser, new[]{ "EpochTime", "NumberStationsFound", "WifiStations" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ModemParameters_103), global::ModemParameters_103.Parser, new[]{ "EpochTime", "CellId" }, null, null, null, null)
         }));
   }
@@ -1081,7 +1081,7 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
   public WifiStationList_102(WifiStationList_102 other) : this() {
     _hasBits0 = other._hasBits0;
     epochTime_ = other.epochTime_;
-    numberStationFound_ = other.numberStationFound_;
+    numberStationsFound_ = other.numberStationsFound_;
     wifiStations_ = other.wifiStations_.Clone();
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
@@ -1115,27 +1115,27 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
     _hasBits0 &= ~1;
   }
 
-  /// <summary>Field number for the "numberStationFound" field.</summary>
-  public const int NumberStationFoundFieldNumber = 2;
-  private readonly static uint NumberStationFoundDefaultValue = 0;
+  /// <summary>Field number for the "numberStationsFound" field.</summary>
+  public const int NumberStationsFoundFieldNumber = 2;
+  private readonly static uint NumberStationsFoundDefaultValue = 0;
 
-  private uint numberStationFound_;
+  private uint numberStationsFound_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public uint NumberStationFound {
-    get { if ((_hasBits0 & 2) != 0) { return numberStationFound_; } else { return NumberStationFoundDefaultValue; } }
+  public uint NumberStationsFound {
+    get { if ((_hasBits0 & 2) != 0) { return numberStationsFound_; } else { return NumberStationsFoundDefaultValue; } }
     set {
       _hasBits0 |= 2;
-      numberStationFound_ = value;
+      numberStationsFound_ = value;
     }
   }
-  /// <summary>Gets whether the "numberStationFound" field is set</summary>
+  /// <summary>Gets whether the "numberStationsFound" field is set</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool HasNumberStationFound {
+  public bool HasNumberStationsFound {
     get { return (_hasBits0 & 2) != 0; }
   }
-  /// <summary>Clears the value of the "numberStationFound" field</summary>
+  /// <summary>Clears the value of the "numberStationsFound" field</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void ClearNumberStationFound() {
+  public void ClearNumberStationsFound() {
     _hasBits0 &= ~2;
   }
 
@@ -1163,7 +1163,7 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
       return true;
     }
     if (EpochTime != other.EpochTime) return false;
-    if (NumberStationFound != other.NumberStationFound) return false;
+    if (NumberStationsFound != other.NumberStationsFound) return false;
     if(!wifiStations_.Equals(other.wifiStations_)) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
@@ -1172,7 +1172,7 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
   public override int GetHashCode() {
     int hash = 1;
     if (HasEpochTime) hash ^= EpochTime.GetHashCode();
-    if (HasNumberStationFound) hash ^= NumberStationFound.GetHashCode();
+    if (HasNumberStationsFound) hash ^= NumberStationsFound.GetHashCode();
     hash ^= wifiStations_.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -1194,9 +1194,9 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
       output.WriteRawTag(8);
       output.WriteUInt32(EpochTime);
     }
-    if (HasNumberStationFound) {
+    if (HasNumberStationsFound) {
       output.WriteRawTag(16);
-      output.WriteUInt32(NumberStationFound);
+      output.WriteUInt32(NumberStationsFound);
     }
     wifiStations_.WriteTo(output, _repeated_wifiStations_codec);
     if (_unknownFields != null) {
@@ -1212,9 +1212,9 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
       output.WriteRawTag(8);
       output.WriteUInt32(EpochTime);
     }
-    if (HasNumberStationFound) {
+    if (HasNumberStationsFound) {
       output.WriteRawTag(16);
-      output.WriteUInt32(NumberStationFound);
+      output.WriteUInt32(NumberStationsFound);
     }
     wifiStations_.WriteTo(ref output, _repeated_wifiStations_codec);
     if (_unknownFields != null) {
@@ -1229,8 +1229,8 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
     if (HasEpochTime) {
       size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EpochTime);
     }
-    if (HasNumberStationFound) {
-      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NumberStationFound);
+    if (HasNumberStationsFound) {
+      size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NumberStationsFound);
     }
     size += wifiStations_.CalculateSize(_repeated_wifiStations_codec);
     if (_unknownFields != null) {
@@ -1247,8 +1247,8 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
     if (other.HasEpochTime) {
       EpochTime = other.EpochTime;
     }
-    if (other.HasNumberStationFound) {
-      NumberStationFound = other.NumberStationFound;
+    if (other.HasNumberStationsFound) {
+      NumberStationsFound = other.NumberStationsFound;
     }
     wifiStations_.Add(other.wifiStations_);
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1270,7 +1270,7 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
           break;
         }
         case 16: {
-          NumberStationFound = input.ReadUInt32();
+          NumberStationsFound = input.ReadUInt32();
           break;
         }
         case 26: {
@@ -1296,7 +1296,7 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
           break;
         }
         case 16: {
-          NumberStationFound = input.ReadUInt32();
+          NumberStationsFound = input.ReadUInt32();
           break;
         }
         case 26: {

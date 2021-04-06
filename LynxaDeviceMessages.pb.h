@@ -38,7 +38,7 @@ typedef struct _WifiStation {
 
 typedef struct _WifiStationList_102 {
     uint32_t epochTime;
-    uint32_t numberStationFound;
+    uint32_t numberStationsFound;
     pb_size_t wifiStations_count;
     WifiStation wifiStations[12];
 } WifiStationList_102;
@@ -76,7 +76,7 @@ extern "C" {
 #define WifiStation_bssid_tag                    1
 #define WifiStation_rssi_tag                     2
 #define WifiStationList_102_epochTime_tag        1
-#define WifiStationList_102_numberStationFound_tag 2
+#define WifiStationList_102_numberStationsFound_tag 2
 #define WifiStationList_102_wifiStations_tag     3
 
 /* Struct field encoding specification for nanopb */
@@ -106,7 +106,7 @@ X(a, STATIC,   REQUIRED, INT32,    rssi,              2)
 
 #define WifiStationList_102_FIELDLIST(X, a) \
 X(a, STATIC,   REQUIRED, UINT32,   epochTime,         1) \
-X(a, STATIC,   REQUIRED, UINT32,   numberStationFound,   2) \
+X(a, STATIC,   REQUIRED, UINT32,   numberStationsFound,   2) \
 X(a, STATIC,   REPEATED, MESSAGE,  wifiStations,      3)
 #define WifiStationList_102_CALLBACK NULL
 #define WifiStationList_102_DEFAULT NULL

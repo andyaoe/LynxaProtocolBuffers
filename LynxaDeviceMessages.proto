@@ -29,7 +29,7 @@ message WifiStation
 message WifiStationList_102
 {
 	required uint32 epochTime = 1;
-	required uint32 numberStationFound = 2;
+	required uint32 numberStationsFound = 2;
 	repeated WifiStation wifiStations = 3 [(nanopb).max_count = 12];
 }
 
