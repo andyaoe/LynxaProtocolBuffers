@@ -33,8 +33,9 @@ public static partial class LynxaDeviceMessagesReflection {
           "GQoFYnNzaWQYASACKAxCCpI/AggGkj8CeAESDAoEcnNzaRgCIAIoBSJwChNX",
           "aWZpU3RhdGlvbkxpc3RfMTAyEhEKCWVwb2NoVGltZRgBIAIoDRIbChNudW1i",
           "ZXJTdGF0aW9uc0ZvdW5kGAIgAigNEikKDHdpZmlTdGF0aW9ucxgDIAMoCzIM",
-          "LldpZmlTdGF0aW9uQgWSPwIQDCJAChNNb2RlbVBhcmFtZXRlcnNfMTAzEhEK",
-          "CWVwb2NoVGltZRgBIAIoDRIWCgdjZWxsX2lkGAIgAigJQgWSPwJwEA=="));
+          "LldpZmlTdGF0aW9uQgWSPwIQDCJpChNNb2RlbVBhcmFtZXRlcnNfMTAzEhEK",
+          "CWVwb2NoVGltZRgBIAIoDRIWCgdjZWxsX2lkGAIgAigJQgWSPwJwCBITCgRw",
+          "bG1uGAMgAigJQgWSPwJwBhISCgN0YWMYBCACKAlCBZI/AnAD"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -42,7 +43,7 @@ public static partial class LynxaDeviceMessagesReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::LogMessage_101), global::LogMessage_101.Parser, new[]{ "EpochTime", "LogMessage" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::WifiStation), global::WifiStation.Parser, new[]{ "Bssid", "Rssi" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::WifiStationList_102), global::WifiStationList_102.Parser, new[]{ "EpochTime", "NumberStationsFound", "WifiStations" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::ModemParameters_103), global::ModemParameters_103.Parser, new[]{ "EpochTime", "CellId" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::ModemParameters_103), global::ModemParameters_103.Parser, new[]{ "EpochTime", "CellId", "Plmn", "Tac" }, null, null, null, null)
         }));
   }
   #endregion
@@ -1343,6 +1344,8 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
     _hasBits0 = other._hasBits0;
     epochTime_ = other.epochTime_;
     cellId_ = other.cellId_;
+    plmn_ = other.plmn_;
+    tac_ = other.tac_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -1398,6 +1401,52 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
     cellId_ = null;
   }
 
+  /// <summary>Field number for the "plmn" field.</summary>
+  public const int PlmnFieldNumber = 3;
+  private readonly static string PlmnDefaultValue = "";
+
+  private string plmn_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string Plmn {
+    get { return plmn_ ?? PlmnDefaultValue; }
+    set {
+      plmn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+  /// <summary>Gets whether the "plmn" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasPlmn {
+    get { return plmn_ != null; }
+  }
+  /// <summary>Clears the value of the "plmn" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearPlmn() {
+    plmn_ = null;
+  }
+
+  /// <summary>Field number for the "tac" field.</summary>
+  public const int TacFieldNumber = 4;
+  private readonly static string TacDefaultValue = "";
+
+  private string tac_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string Tac {
+    get { return tac_ ?? TacDefaultValue; }
+    set {
+      tac_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+  /// <summary>Gets whether the "tac" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasTac {
+    get { return tac_ != null; }
+  }
+  /// <summary>Clears the value of the "tac" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearTac() {
+    tac_ = null;
+  }
+
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override bool Equals(object other) {
     return Equals(other as ModemParameters_103);
@@ -1413,6 +1462,8 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
     }
     if (EpochTime != other.EpochTime) return false;
     if (CellId != other.CellId) return false;
+    if (Plmn != other.Plmn) return false;
+    if (Tac != other.Tac) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -1421,6 +1472,8 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
     int hash = 1;
     if (HasEpochTime) hash ^= EpochTime.GetHashCode();
     if (HasCellId) hash ^= CellId.GetHashCode();
+    if (HasPlmn) hash ^= Plmn.GetHashCode();
+    if (HasTac) hash ^= Tac.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -1445,6 +1498,14 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
       output.WriteRawTag(18);
       output.WriteString(CellId);
     }
+    if (HasPlmn) {
+      output.WriteRawTag(26);
+      output.WriteString(Plmn);
+    }
+    if (HasTac) {
+      output.WriteRawTag(34);
+      output.WriteString(Tac);
+    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -1462,6 +1523,14 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
       output.WriteRawTag(18);
       output.WriteString(CellId);
     }
+    if (HasPlmn) {
+      output.WriteRawTag(26);
+      output.WriteString(Plmn);
+    }
+    if (HasTac) {
+      output.WriteRawTag(34);
+      output.WriteString(Tac);
+    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -1476,6 +1545,12 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
     }
     if (HasCellId) {
       size += 1 + pb::CodedOutputStream.ComputeStringSize(CellId);
+    }
+    if (HasPlmn) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Plmn);
+    }
+    if (HasTac) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Tac);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -1493,6 +1568,12 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
     }
     if (other.HasCellId) {
       CellId = other.CellId;
+    }
+    if (other.HasPlmn) {
+      Plmn = other.Plmn;
+    }
+    if (other.HasTac) {
+      Tac = other.Tac;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -1516,6 +1597,14 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
           CellId = input.ReadString();
           break;
         }
+        case 26: {
+          Plmn = input.ReadString();
+          break;
+        }
+        case 34: {
+          Tac = input.ReadString();
+          break;
+        }
       }
     }
   #endif
@@ -1536,6 +1625,14 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
         }
         case 18: {
           CellId = input.ReadString();
+          break;
+        }
+        case 26: {
+          Plmn = input.ReadString();
+          break;
+        }
+        case 34: {
+          Tac = input.ReadString();
           break;
         }
       }

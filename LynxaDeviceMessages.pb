@@ -1,5 +1,5 @@
 
-Ã
+ø
 LynxaDeviceMessages.protonanopb.proto"„
 GnggaMessage_100
 	epochTime (R	epochTime(
@@ -23,7 +23,9 @@ logMessage"C
 WifiStationList_102
 	epochTime (R	epochTime0
 numberStationsFound (RnumberStationsFound7
-wifiStations (2.WifiStationB’?RwifiStations"S
+wifiStations (2.WifiStationB’?RwifiStations"‡
 ModemParameters_103
 	epochTime (R	epochTime
-cell_id (	B’?pRcellId
+cell_id (	B’?pRcellId
+plmn (	B’?pRplmn
+tac (	B’?pRtac
