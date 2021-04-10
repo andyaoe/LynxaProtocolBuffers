@@ -38,5 +38,5 @@ message ModemParameters_103
 	required uint32 epochTime = 1;
 	required string cell_id = 2 [(nanopb).max_length = 8];
 	required string plmn = 3 [(nanopb).max_length = 6];
-	required string tac = 4 [(nanopb).max_length = 5];
+	required string tac = 4 [(nanopb).max_length = 4];
 }
