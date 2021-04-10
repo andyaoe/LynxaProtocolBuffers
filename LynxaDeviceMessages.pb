@@ -28,4 +28,4 @@ logMessage"C
 	epochTime (R	epochTime
 cell_id (	B’?pRcellId
 plmn (	B’?pRplmn
-tac (	B’?pRtac
+tac (	B’?pRtac

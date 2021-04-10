@@ -30,7 +30,7 @@ typedef struct _ModemParameters_103 {
     uint32_t epochTime;
     char cell_id[9];
     char plmn[7];
-    char tac[4];
+    char tac[6];
 } ModemParameters_103;
 
 typedef struct _WifiStation {
@@ -142,7 +142,7 @@ extern const pb_msgdesc_t ModemParameters_103_msg;
 #define LogMessage_101_size                      137
 #define WifiStation_size                         19
 #define WifiStationList_102_size                 264
-#define ModemParameters_103_size                 29
+#define ModemParameters_103_size                 31
 
 #ifdef __cplusplus
 } /* extern "C" */
