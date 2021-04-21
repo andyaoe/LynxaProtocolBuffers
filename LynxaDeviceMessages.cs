@@ -35,10 +35,11 @@ public static partial class LynxaDeviceMessagesReflection {
           "ZXJTdGF0aW9uc0ZvdW5kGAIgAigNEikKDHdpZmlTdGF0aW9ucxgDIAMoCzIM",
           "LldpZmlTdGF0aW9uQgWSPwIQDCJpChNNb2RlbVBhcmFtZXRlcnNfMTAzEhEK",
           "CWVwb2NoVGltZRgBIAIoDRIWCgdjZWxsX2lkGAIgAigJQgWSPwJwCBITCgRw",
-          "bG1uGAMgAigJQgWSPwJwBhISCgN0YWMYBCACKAlCBZI/AnAD"));
+          "bG1uGAMgAigJQgWSPwJwBhISCgN0YWMYBCACKAlCBZI/AnAEKjIKEERldmlj",
+          "ZVByb3BlcnRpZXMSDQoJRXhlY0xldmVsEAASDwoLR3BzSW50ZXJ2YWwQAQ=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
-        new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+        new pbr::GeneratedClrTypeInfo(new[] {typeof(global::DeviceProperties), }, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::GnggaMessage_100), global::GnggaMessage_100.Parser, new[]{ "EpochTime", "LatitudeMinutes", "LatitudeDegrees", "LatitudeCardinalAscii", "LongitudeMinutes", "LongitudeDegrees", "LongitudeCardinalAscii", "NumberOfSatellitesInUse" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::LogMessage_101), global::LogMessage_101.Parser, new[]{ "EpochTime", "LogMessage" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::WifiStation), global::WifiStation.Parser, new[]{ "Bssid", "Rssi" }, null, null, null, null),
@@ -49,6 +50,14 @@ public static partial class LynxaDeviceMessagesReflection {
   #endregion
 
 }
+#region Enums
+public enum DeviceProperties {
+  [pbr::OriginalName("ExecLevel")] ExecLevel = 0,
+  [pbr::OriginalName("GpsInterval")] GpsInterval = 1,
+}
+
+#endregion
+
 #region Messages
 public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

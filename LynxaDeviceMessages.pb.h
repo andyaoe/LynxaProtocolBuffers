@@ -9,6 +9,12 @@
 #error Regenerate this file with the current version of nanopb generator.
 #endif
 
+/* Enum definitions */
+typedef enum _DeviceProperties {
+    DeviceProperties_ExecLevel = 0,
+    DeviceProperties_GpsInterval = 1
+} DeviceProperties;
+
 /* Struct definitions */
 typedef struct _GnggaMessage_100 {
     uint32_t epochTime;
@@ -44,6 +50,12 @@ typedef struct _WifiStationList_102 {
     pb_size_t wifiStations_count;
     WifiStation wifiStations[12];
 } WifiStationList_102;
+
+
+/* Helper constants for enums */
+#define _DeviceProperties_MIN DeviceProperties_ExecLevel
+#define _DeviceProperties_MAX DeviceProperties_GpsInterval
+#define _DeviceProperties_ARRAYSIZE ((DeviceProperties)(DeviceProperties_GpsInterval+1))
 
 
 #ifdef __cplusplus
