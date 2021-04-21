@@ -2,9 +2,21 @@ syntax = "proto2";
 
 import "nanopb.proto";
 
-enum DeviceProperties {
-	ExecLevel = 0;
-	GpsInterval = 1;
+message DeviceProperty_10
+{
+	enum DevicePropertyName {
+		ExecLevel = 0;
+		GpsInterval = 1;
+	}
+	enum DevicePropertyType {
+		undefined = 0;
+		get = 1;
+		set = 2;
+	}
+
+	required DevicePropertyType type = 1;
+	required DevicePropertyName name = 2;
+	required string argument = 3 [(nanopb).max_length = 64];
 }
 
 message GnggaMessage_100

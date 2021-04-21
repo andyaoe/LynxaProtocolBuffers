@@ -22,24 +22,30 @@ public static partial class LynxaDeviceMessagesReflection {
   static LynxaDeviceMessagesReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8i6wEK",
-          "EEduZ2dhTWVzc2FnZV8xMDASEQoJZXBvY2hUaW1lGAEgAigNEhcKD2xhdGl0",
-          "dWRlTWludXRlcxgEIAIoAhIXCg9sYXRpdHVkZURlZ3JlZXMYBSACKA0SHQoV",
-          "bGF0aXR1ZGVDYXJkaW5hbEFzY2lpGAYgAigNEhgKEGxvbmdpdHVkZU1pbnV0",
-          "ZXMYByACKAISGAoQbG9uZ2l0dWRlRGVncmVlcxgIIAIoDRIeChZsb25naXR1",
-          "ZGVDYXJkaW5hbEFzY2lpGAkgAigNEh8KF251bWJlck9mU2F0ZWxsaXRlc0lu",
-          "VXNlGAogAigNIj8KDkxvZ01lc3NhZ2VfMTAxEhEKCWVwb2NoVGltZRgBIAIo",
-          "DRIaCgpsb2dNZXNzYWdlGAIgAigJQgaSPwNwgAEiNgoLV2lmaVN0YXRpb24S",
-          "GQoFYnNzaWQYASACKAxCCpI/AggGkj8CeAESDAoEcnNzaRgCIAIoBSJwChNX",
-          "aWZpU3RhdGlvbkxpc3RfMTAyEhEKCWVwb2NoVGltZRgBIAIoDRIbChNudW1i",
-          "ZXJTdGF0aW9uc0ZvdW5kGAIgAigNEikKDHdpZmlTdGF0aW9ucxgDIAMoCzIM",
-          "LldpZmlTdGF0aW9uQgWSPwIQDCJpChNNb2RlbVBhcmFtZXRlcnNfMTAzEhEK",
-          "CWVwb2NoVGltZRgBIAIoDRIWCgdjZWxsX2lkGAIgAigJQgWSPwJwCBITCgRw",
-          "bG1uGAMgAigJQgWSPwJwBhISCgN0YWMYBCACKAlCBZI/AnAEKjIKEERldmlj",
-          "ZVByb3BlcnRpZXMSDQoJRXhlY0xldmVsEAASDwoLR3BzSW50ZXJ2YWwQAQ=="));
+          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8igwIK",
+          "EURldmljZVByb3BlcnR5XzEwEjMKBHR5cGUYASACKA4yJS5EZXZpY2VQcm9w",
+          "ZXJ0eV8xMC5EZXZpY2VQcm9wZXJ0eVR5cGUSMwoEbmFtZRgCIAIoDjIlLkRl",
+          "dmljZVByb3BlcnR5XzEwLkRldmljZVByb3BlcnR5TmFtZRIXCghhcmd1bWVu",
+          "dBgDIAIoCUIFkj8CcEAiNAoSRGV2aWNlUHJvcGVydHlOYW1lEg0KCUV4ZWNM",
+          "ZXZlbBAAEg8KC0dwc0ludGVydmFsEAEiNQoSRGV2aWNlUHJvcGVydHlUeXBl",
+          "Eg0KCXVuZGVmaW5lZBAAEgcKA2dldBABEgcKA3NldBACIusBChBHbmdnYU1l",
+          "c3NhZ2VfMTAwEhEKCWVwb2NoVGltZRgBIAIoDRIXCg9sYXRpdHVkZU1pbnV0",
+          "ZXMYBCACKAISFwoPbGF0aXR1ZGVEZWdyZWVzGAUgAigNEh0KFWxhdGl0dWRl",
+          "Q2FyZGluYWxBc2NpaRgGIAIoDRIYChBsb25naXR1ZGVNaW51dGVzGAcgAigC",
+          "EhgKEGxvbmdpdHVkZURlZ3JlZXMYCCACKA0SHgoWbG9uZ2l0dWRlQ2FyZGlu",
+          "YWxBc2NpaRgJIAIoDRIfChdudW1iZXJPZlNhdGVsbGl0ZXNJblVzZRgKIAIo",
+          "DSI/Cg5Mb2dNZXNzYWdlXzEwMRIRCgllcG9jaFRpbWUYASACKA0SGgoKbG9n",
+          "TWVzc2FnZRgCIAIoCUIGkj8DcIABIjYKC1dpZmlTdGF0aW9uEhkKBWJzc2lk",
+          "GAEgAigMQgqSPwIIBpI/AngBEgwKBHJzc2kYAiACKAUicAoTV2lmaVN0YXRp",
+          "b25MaXN0XzEwMhIRCgllcG9jaFRpbWUYASACKA0SGwoTbnVtYmVyU3RhdGlv",
+          "bnNGb3VuZBgCIAIoDRIpCgx3aWZpU3RhdGlvbnMYAyADKAsyDC5XaWZpU3Rh",
+          "dGlvbkIFkj8CEAwiaQoTTW9kZW1QYXJhbWV0ZXJzXzEwMxIRCgllcG9jaFRp",
+          "bWUYASACKA0SFgoHY2VsbF9pZBgCIAIoCUIFkj8CcAgSEwoEcGxtbhgDIAIo",
+          "CUIFkj8CcAYSEgoDdGFjGAQgAigJQgWSPwJwBA=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
-        new pbr::GeneratedClrTypeInfo(new[] {typeof(global::DeviceProperties), }, null, new pbr::GeneratedClrTypeInfo[] {
+        new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(typeof(global::DeviceProperty_10), global::DeviceProperty_10.Parser, new[]{ "Type", "Name", "Argument" }, null, new[]{ typeof(global::DeviceProperty_10.Types.DevicePropertyName), typeof(global::DeviceProperty_10.Types.DevicePropertyType) }, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::GnggaMessage_100), global::GnggaMessage_100.Parser, new[]{ "EpochTime", "LatitudeMinutes", "LatitudeDegrees", "LatitudeCardinalAscii", "LongitudeMinutes", "LongitudeDegrees", "LongitudeCardinalAscii", "NumberOfSatellitesInUse" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::LogMessage_101), global::LogMessage_101.Parser, new[]{ "EpochTime", "LogMessage" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::WifiStation), global::WifiStation.Parser, new[]{ "Bssid", "Rssi" }, null, null, null, null),
@@ -50,15 +56,309 @@ public static partial class LynxaDeviceMessagesReflection {
   #endregion
 
 }
-#region Enums
-public enum DeviceProperties {
-  [pbr::OriginalName("ExecLevel")] ExecLevel = 0,
-  [pbr::OriginalName("GpsInterval")] GpsInterval = 1,
+#region Messages
+public sealed partial class DeviceProperty_10 : pb::IMessage<DeviceProperty_10>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<DeviceProperty_10> _parser = new pb::MessageParser<DeviceProperty_10>(() => new DeviceProperty_10());
+  private pb::UnknownFieldSet _unknownFields;
+  private int _hasBits0;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<DeviceProperty_10> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[0]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public DeviceProperty_10() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public DeviceProperty_10(DeviceProperty_10 other) : this() {
+    _hasBits0 = other._hasBits0;
+    type_ = other.type_;
+    name_ = other.name_;
+    argument_ = other.argument_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public DeviceProperty_10 Clone() {
+    return new DeviceProperty_10(this);
+  }
+
+  /// <summary>Field number for the "type" field.</summary>
+  public const int TypeFieldNumber = 1;
+  private readonly static global::DeviceProperty_10.Types.DevicePropertyType TypeDefaultValue = global::DeviceProperty_10.Types.DevicePropertyType.Undefined;
+
+  private global::DeviceProperty_10.Types.DevicePropertyType type_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public global::DeviceProperty_10.Types.DevicePropertyType Type {
+    get { if ((_hasBits0 & 1) != 0) { return type_; } else { return TypeDefaultValue; } }
+    set {
+      _hasBits0 |= 1;
+      type_ = value;
+    }
+  }
+  /// <summary>Gets whether the "type" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasType {
+    get { return (_hasBits0 & 1) != 0; }
+  }
+  /// <summary>Clears the value of the "type" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearType() {
+    _hasBits0 &= ~1;
+  }
+
+  /// <summary>Field number for the "name" field.</summary>
+  public const int NameFieldNumber = 2;
+  private readonly static global::DeviceProperty_10.Types.DevicePropertyName NameDefaultValue = global::DeviceProperty_10.Types.DevicePropertyName.ExecLevel;
+
+  private global::DeviceProperty_10.Types.DevicePropertyName name_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public global::DeviceProperty_10.Types.DevicePropertyName Name {
+    get { if ((_hasBits0 & 2) != 0) { return name_; } else { return NameDefaultValue; } }
+    set {
+      _hasBits0 |= 2;
+      name_ = value;
+    }
+  }
+  /// <summary>Gets whether the "name" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasName {
+    get { return (_hasBits0 & 2) != 0; }
+  }
+  /// <summary>Clears the value of the "name" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearName() {
+    _hasBits0 &= ~2;
+  }
+
+  /// <summary>Field number for the "argument" field.</summary>
+  public const int ArgumentFieldNumber = 3;
+  private readonly static string ArgumentDefaultValue = "";
+
+  private string argument_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string Argument {
+    get { return argument_ ?? ArgumentDefaultValue; }
+    set {
+      argument_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+  /// <summary>Gets whether the "argument" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool HasArgument {
+    get { return argument_ != null; }
+  }
+  /// <summary>Clears the value of the "argument" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void ClearArgument() {
+    argument_ = null;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as DeviceProperty_10);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(DeviceProperty_10 other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (Type != other.Type) return false;
+    if (Name != other.Name) return false;
+    if (Argument != other.Argument) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (HasType) hash ^= Type.GetHashCode();
+    if (HasName) hash ^= Name.GetHashCode();
+    if (HasArgument) hash ^= Argument.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (HasType) {
+      output.WriteRawTag(8);
+      output.WriteEnum((int) Type);
+    }
+    if (HasName) {
+      output.WriteRawTag(16);
+      output.WriteEnum((int) Name);
+    }
+    if (HasArgument) {
+      output.WriteRawTag(26);
+      output.WriteString(Argument);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (HasType) {
+      output.WriteRawTag(8);
+      output.WriteEnum((int) Type);
+    }
+    if (HasName) {
+      output.WriteRawTag(16);
+      output.WriteEnum((int) Name);
+    }
+    if (HasArgument) {
+      output.WriteRawTag(26);
+      output.WriteString(Argument);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    if (HasType) {
+      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+    }
+    if (HasName) {
+      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Name);
+    }
+    if (HasArgument) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Argument);
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(DeviceProperty_10 other) {
+    if (other == null) {
+      return;
+    }
+    if (other.HasType) {
+      Type = other.Type;
+    }
+    if (other.HasName) {
+      Name = other.Name;
+    }
+    if (other.HasArgument) {
+      Argument = other.Argument;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 8: {
+          Type = (global::DeviceProperty_10.Types.DevicePropertyType) input.ReadEnum();
+          break;
+        }
+        case 16: {
+          Name = (global::DeviceProperty_10.Types.DevicePropertyName) input.ReadEnum();
+          break;
+        }
+        case 26: {
+          Argument = input.ReadString();
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 8: {
+          Type = (global::DeviceProperty_10.Types.DevicePropertyType) input.ReadEnum();
+          break;
+        }
+        case 16: {
+          Name = (global::DeviceProperty_10.Types.DevicePropertyName) input.ReadEnum();
+          break;
+        }
+        case 26: {
+          Argument = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+  #region Nested types
+  /// <summary>Container for nested types declared in the DeviceProperty_10 message type.</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static partial class Types {
+    public enum DevicePropertyName {
+      [pbr::OriginalName("ExecLevel")] ExecLevel = 0,
+      [pbr::OriginalName("GpsInterval")] GpsInterval = 1,
+    }
+
+    public enum DevicePropertyType {
+      [pbr::OriginalName("undefined")] Undefined = 0,
+      [pbr::OriginalName("get")] Get = 1,
+      [pbr::OriginalName("set")] Set = 2,
+    }
+
+  }
+  #endregion
+
 }
 
-#endregion
-
-#region Messages
 public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
@@ -72,7 +372,7 @@ public sealed partial class GnggaMessage_100 : pb::IMessage<GnggaMessage_100>
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[0]; }
+    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[1]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -602,7 +902,7 @@ public sealed partial class LogMessage_101 : pb::IMessage<LogMessage_101>
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[1]; }
+    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[2]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -837,7 +1137,7 @@ public sealed partial class WifiStation : pb::IMessage<WifiStation>
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[2]; }
+    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[3]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1072,7 +1372,7 @@ public sealed partial class WifiStationList_102 : pb::IMessage<WifiStationList_1
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[3]; }
+    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[4]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1333,7 +1633,7 @@ public sealed partial class ModemParameters_103 : pb::IMessage<ModemParameters_1
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[4]; }
+    get { return global::LynxaDeviceMessagesReflection.Descriptor.MessageTypes[5]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

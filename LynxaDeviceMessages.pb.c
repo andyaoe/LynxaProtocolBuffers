@@ -6,6 +6,9 @@
 #error Regenerate this file with the current version of nanopb generator.
 #endif
 
+PB_BIND(DeviceProperty_10, DeviceProperty_10, AUTO)
+
+
 PB_BIND(GnggaMessage_100, GnggaMessage_100, AUTO)
 
 
@@ -19,6 +22,7 @@ PB_BIND(WifiStationList_102, WifiStationList_102, AUTO)
 
 
 PB_BIND(ModemParameters_103, ModemParameters_103, AUTO)
+
 
 
 

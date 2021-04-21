@@ -10,12 +10,24 @@
 #endif
 
 /* Enum definitions */
-typedef enum _DeviceProperties {
-    DeviceProperties_ExecLevel = 0,
-    DeviceProperties_GpsInterval = 1
-} DeviceProperties;
+typedef enum _DeviceProperty_10_DevicePropertyName {
+    DeviceProperty_10_DevicePropertyName_ExecLevel = 0,
+    DeviceProperty_10_DevicePropertyName_GpsInterval = 1
+} DeviceProperty_10_DevicePropertyName;
+
+typedef enum _DeviceProperty_10_DevicePropertyType {
+    DeviceProperty_10_DevicePropertyType_undefined = 0,
+    DeviceProperty_10_DevicePropertyType_get = 1,
+    DeviceProperty_10_DevicePropertyType_set = 2
+} DeviceProperty_10_DevicePropertyType;
 
 /* Struct definitions */
+typedef struct _DeviceProperty_10 {
+    DeviceProperty_10_DevicePropertyType type;
+    DeviceProperty_10_DevicePropertyName name;
+    char argument[65];
+} DeviceProperty_10;
+
 typedef struct _GnggaMessage_100 {
     uint32_t epochTime;
     float latitudeMinutes;
@@ -53,9 +65,13 @@ typedef struct _WifiStationList_102 {
 
 
 /* Helper constants for enums */
-#define _DeviceProperties_MIN DeviceProperties_ExecLevel
-#define _DeviceProperties_MAX DeviceProperties_GpsInterval
-#define _DeviceProperties_ARRAYSIZE ((DeviceProperties)(DeviceProperties_GpsInterval+1))
+#define _DeviceProperty_10_DevicePropertyName_MIN DeviceProperty_10_DevicePropertyName_ExecLevel
+#define _DeviceProperty_10_DevicePropertyName_MAX DeviceProperty_10_DevicePropertyName_GpsInterval
+#define _DeviceProperty_10_DevicePropertyName_ARRAYSIZE ((DeviceProperty_10_DevicePropertyName)(DeviceProperty_10_DevicePropertyName_GpsInterval+1))
+
+#define _DeviceProperty_10_DevicePropertyType_MIN DeviceProperty_10_DevicePropertyType_undefined
+#define _DeviceProperty_10_DevicePropertyType_MAX DeviceProperty_10_DevicePropertyType_set
+#define _DeviceProperty_10_DevicePropertyType_ARRAYSIZE ((DeviceProperty_10_DevicePropertyType)(DeviceProperty_10_DevicePropertyType_set+1))
 
 
 #ifdef __cplusplus
@@ -63,11 +79,13 @@ extern "C" {
 #endif
 
 /* Initializer values for message structs */
+#define DeviceProperty_10_init_default           {_DeviceProperty_10_DevicePropertyType_MIN, _DeviceProperty_10_DevicePropertyName_MIN, ""}
 #define GnggaMessage_100_init_default            {0, 0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_default              {0, ""}
 #define WifiStation_init_default                 {{0}, 0}
 #define WifiStationList_102_init_default         {0, 0, 0, {WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default, WifiStation_init_default}}
 #define ModemParameters_103_init_default         {0, "", "", ""}
+#define DeviceProperty_10_init_zero              {_DeviceProperty_10_DevicePropertyType_MIN, _DeviceProperty_10_DevicePropertyName_MIN, ""}
 #define GnggaMessage_100_init_zero               {0, 0, 0, 0, 0, 0, 0, 0}
 #define LogMessage_101_init_zero                 {0, ""}
 #define WifiStation_init_zero                    {{0}, 0}
@@ -75,6 +93,9 @@ extern "C" {
 #define ModemParameters_103_init_zero            {0, "", "", ""}
 
 /* Field tags (for use in manual encoding/decoding) */
+#define DeviceProperty_10_type_tag               1
+#define DeviceProperty_10_name_tag               2
+#define DeviceProperty_10_argument_tag           3
 #define GnggaMessage_100_epochTime_tag           1
 #define GnggaMessage_100_latitudeMinutes_tag     4
 #define GnggaMessage_100_latitudeDegrees_tag     5
@@ -96,6 +117,13 @@ extern "C" {
 #define WifiStationList_102_wifiStations_tag     3
 
 /* Struct field encoding specification for nanopb */
+#define DeviceProperty_10_FIELDLIST(X, a) \
+X(a, STATIC,   REQUIRED, UENUM,    type,              1) \
+X(a, STATIC,   REQUIRED, UENUM,    name,              2) \
+X(a, STATIC,   REQUIRED, STRING,   argument,          3)
+#define DeviceProperty_10_CALLBACK NULL
+#define DeviceProperty_10_DEFAULT NULL
+
 #define GnggaMessage_100_FIELDLIST(X, a) \
 X(a, STATIC,   REQUIRED, UINT32,   epochTime,         1) \
 X(a, STATIC,   REQUIRED, FLOAT,    latitudeMinutes,   4) \
@@ -136,6 +164,7 @@ X(a, STATIC,   REQUIRED, STRING,   tac,               4)
 #define ModemParameters_103_CALLBACK NULL
 #define ModemParameters_103_DEFAULT NULL
 
+extern const pb_msgdesc_t DeviceProperty_10_msg;
 extern const pb_msgdesc_t GnggaMessage_100_msg;
 extern const pb_msgdesc_t LogMessage_101_msg;
 extern const pb_msgdesc_t WifiStation_msg;
@@ -143,6 +172,7 @@ extern const pb_msgdesc_t WifiStationList_102_msg;
 extern const pb_msgdesc_t ModemParameters_103_msg;
 
 /* Defines for backwards compatibility with code written before nanopb-0.4.0 */
+#define DeviceProperty_10_fields &DeviceProperty_10_msg
 #define GnggaMessage_100_fields &GnggaMessage_100_msg
 #define LogMessage_101_fields &LogMessage_101_msg
 #define WifiStation_fields &WifiStation_msg
@@ -150,6 +180,7 @@ extern const pb_msgdesc_t ModemParameters_103_msg;
 #define ModemParameters_103_fields &ModemParameters_103_msg
 
 /* Maximum encoded size of messages (where known) */
+#define DeviceProperty_10_size                   70
 #define GnggaMessage_100_size                    46
 #define LogMessage_101_size                      137
 #define WifiStation_size                         19
