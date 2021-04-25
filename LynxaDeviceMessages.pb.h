@@ -18,7 +18,8 @@ typedef enum _DeviceProperty_10_DevicePropertyName {
 typedef enum _DeviceProperty_10_DevicePropertyType {
     DeviceProperty_10_DevicePropertyType_undefined = 0,
     DeviceProperty_10_DevicePropertyType_get = 1,
-    DeviceProperty_10_DevicePropertyType_set = 2
+    DeviceProperty_10_DevicePropertyType_set = 2,
+    DeviceProperty_10_DevicePropertyType_current = 3
 } DeviceProperty_10_DevicePropertyType;
 
 /* Struct definitions */
@@ -70,8 +71,8 @@ typedef struct _WifiStationList_102 {
 #define _DeviceProperty_10_DevicePropertyName_ARRAYSIZE ((DeviceProperty_10_DevicePropertyName)(DeviceProperty_10_DevicePropertyName_GpsInterval+1))
 
 #define _DeviceProperty_10_DevicePropertyType_MIN DeviceProperty_10_DevicePropertyType_undefined
-#define _DeviceProperty_10_DevicePropertyType_MAX DeviceProperty_10_DevicePropertyType_set
-#define _DeviceProperty_10_DevicePropertyType_ARRAYSIZE ((DeviceProperty_10_DevicePropertyType)(DeviceProperty_10_DevicePropertyType_set+1))
+#define _DeviceProperty_10_DevicePropertyType_MAX DeviceProperty_10_DevicePropertyType_current
+#define _DeviceProperty_10_DevicePropertyType_ARRAYSIZE ((DeviceProperty_10_DevicePropertyType)(DeviceProperty_10_DevicePropertyType_current+1))
 
 
 #ifdef __cplusplus

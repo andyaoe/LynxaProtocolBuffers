@@ -22,26 +22,26 @@ public static partial class LynxaDeviceMessagesReflection {
   static LynxaDeviceMessagesReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8igwIK",
+          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8ikAIK",
           "EURldmljZVByb3BlcnR5XzEwEjMKBHR5cGUYASACKA4yJS5EZXZpY2VQcm9w",
           "ZXJ0eV8xMC5EZXZpY2VQcm9wZXJ0eVR5cGUSMwoEbmFtZRgCIAIoDjIlLkRl",
           "dmljZVByb3BlcnR5XzEwLkRldmljZVByb3BlcnR5TmFtZRIXCghhcmd1bWVu",
           "dBgDIAIoCUIFkj8CcEAiNAoSRGV2aWNlUHJvcGVydHlOYW1lEg0KCUV4ZWNM",
-          "ZXZlbBAAEg8KC0dwc0ludGVydmFsEAEiNQoSRGV2aWNlUHJvcGVydHlUeXBl",
-          "Eg0KCXVuZGVmaW5lZBAAEgcKA2dldBABEgcKA3NldBACIusBChBHbmdnYU1l",
-          "c3NhZ2VfMTAwEhEKCWVwb2NoVGltZRgBIAIoDRIXCg9sYXRpdHVkZU1pbnV0",
-          "ZXMYBCACKAISFwoPbGF0aXR1ZGVEZWdyZWVzGAUgAigNEh0KFWxhdGl0dWRl",
-          "Q2FyZGluYWxBc2NpaRgGIAIoDRIYChBsb25naXR1ZGVNaW51dGVzGAcgAigC",
-          "EhgKEGxvbmdpdHVkZURlZ3JlZXMYCCACKA0SHgoWbG9uZ2l0dWRlQ2FyZGlu",
-          "YWxBc2NpaRgJIAIoDRIfChdudW1iZXJPZlNhdGVsbGl0ZXNJblVzZRgKIAIo",
-          "DSI/Cg5Mb2dNZXNzYWdlXzEwMRIRCgllcG9jaFRpbWUYASACKA0SGgoKbG9n",
-          "TWVzc2FnZRgCIAIoCUIGkj8DcIABIjYKC1dpZmlTdGF0aW9uEhkKBWJzc2lk",
-          "GAEgAigMQgqSPwIIBpI/AngBEgwKBHJzc2kYAiACKAUicAoTV2lmaVN0YXRp",
-          "b25MaXN0XzEwMhIRCgllcG9jaFRpbWUYASACKA0SGwoTbnVtYmVyU3RhdGlv",
-          "bnNGb3VuZBgCIAIoDRIpCgx3aWZpU3RhdGlvbnMYAyADKAsyDC5XaWZpU3Rh",
-          "dGlvbkIFkj8CEAwiaQoTTW9kZW1QYXJhbWV0ZXJzXzEwMxIRCgllcG9jaFRp",
-          "bWUYASACKA0SFgoHY2VsbF9pZBgCIAIoCUIFkj8CcAgSEwoEcGxtbhgDIAIo",
-          "CUIFkj8CcAYSEgoDdGFjGAQgAigJQgWSPwJwBA=="));
+          "ZXZlbBAAEg8KC0dwc0ludGVydmFsEAEiQgoSRGV2aWNlUHJvcGVydHlUeXBl",
+          "Eg0KCXVuZGVmaW5lZBAAEgcKA2dldBABEgcKA3NldBACEgsKB2N1cnJlbnQQ",
+          "AyLrAQoQR25nZ2FNZXNzYWdlXzEwMBIRCgllcG9jaFRpbWUYASACKA0SFwoP",
+          "bGF0aXR1ZGVNaW51dGVzGAQgAigCEhcKD2xhdGl0dWRlRGVncmVlcxgFIAIo",
+          "DRIdChVsYXRpdHVkZUNhcmRpbmFsQXNjaWkYBiACKA0SGAoQbG9uZ2l0dWRl",
+          "TWludXRlcxgHIAIoAhIYChBsb25naXR1ZGVEZWdyZWVzGAggAigNEh4KFmxv",
+          "bmdpdHVkZUNhcmRpbmFsQXNjaWkYCSACKA0SHwoXbnVtYmVyT2ZTYXRlbGxp",
+          "dGVzSW5Vc2UYCiACKA0iPwoOTG9nTWVzc2FnZV8xMDESEQoJZXBvY2hUaW1l",
+          "GAEgAigNEhoKCmxvZ01lc3NhZ2UYAiACKAlCBpI/A3CAASI2CgtXaWZpU3Rh",
+          "dGlvbhIZCgVic3NpZBgBIAIoDEIKkj8CCAaSPwJ4ARIMCgRyc3NpGAIgAigF",
+          "InAKE1dpZmlTdGF0aW9uTGlzdF8xMDISEQoJZXBvY2hUaW1lGAEgAigNEhsK",
+          "E251bWJlclN0YXRpb25zRm91bmQYAiACKA0SKQoMd2lmaVN0YXRpb25zGAMg",
+          "AygLMgwuV2lmaVN0YXRpb25CBZI/AhAMImkKE01vZGVtUGFyYW1ldGVyc18x",
+          "MDMSEQoJZXBvY2hUaW1lGAEgAigNEhYKB2NlbGxfaWQYAiACKAlCBZI/AnAI",
+          "EhMKBHBsbW4YAyACKAlCBZI/AnAGEhIKA3RhYxgEIAIoCUIFkj8CcAQ="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -352,6 +352,7 @@ public sealed partial class DeviceProperty_10 : pb::IMessage<DeviceProperty_10>
       [pbr::OriginalName("undefined")] Undefined = 0,
       [pbr::OriginalName("get")] Get = 1,
       [pbr::OriginalName("set")] Set = 2,
+      [pbr::OriginalName("current")] Current = 3,
     }
 
   }

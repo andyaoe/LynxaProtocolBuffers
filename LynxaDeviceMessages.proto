@@ -12,6 +12,7 @@ message DeviceProperty_10
 		undefined = 0;
 		get = 1;
 		set = 2;
+		current = 3;
 	}
 
 	required DevicePropertyType type = 1;
