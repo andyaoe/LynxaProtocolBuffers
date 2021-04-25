@@ -41,10 +41,14 @@ public static partial class LynxaDeviceMessagesReflection {
           "E251bWJlclN0YXRpb25zRm91bmQYAiACKA0SKQoMd2lmaVN0YXRpb25zGAMg",
           "AygLMgwuV2lmaVN0YXRpb25CBZI/AhAMImkKE01vZGVtUGFyYW1ldGVyc18x",
           "MDMSEQoJZXBvY2hUaW1lGAEgAigNEhYKB2NlbGxfaWQYAiACKAlCBZI/AnAI",
-          "EhMKBHBsbW4YAyACKAlCBZI/AnAGEhIKA3RhYxgEIAIoCUIFkj8CcAQ="));
+          "EhMKBHBsbW4YAyACKAlCBZI/AnAGEhIKA3RhYxgEIAIoCUIFkj8CcAQqkgEK",
+          "Dkx5bnhhTWVzc2FnZUlkEhgKFERldmljZVByb3BlcnR5XzEwX0lkEAoSFwoT",
+          "R25nZ2FNZXNzYWdlXzEwMF9JZBBkEhUKEUxvZ01lc3NhZ2VfMTAxX0lkEGUS",
+          "GgoWV2lmaVN0YXRpb25MaXN0XzEwMl9JZBBmEhoKFk1vZGVtUGFyYW1ldGVy",
+          "c18xMDNfSWQQZw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
-        new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+        new pbr::GeneratedClrTypeInfo(new[] {typeof(global::LynxaMessageId), }, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::DeviceProperty_10), global::DeviceProperty_10.Parser, new[]{ "Type", "Name", "Argument" }, null, new[]{ typeof(global::DeviceProperty_10.Types.DevicePropertyName), typeof(global::DeviceProperty_10.Types.DevicePropertyType) }, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::GnggaMessage_100), global::GnggaMessage_100.Parser, new[]{ "EpochTime", "LatitudeMinutes", "LatitudeDegrees", "LatitudeCardinalAscii", "LongitudeMinutes", "LongitudeDegrees", "LongitudeCardinalAscii", "NumberOfSatellitesInUse" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::LogMessage_101), global::LogMessage_101.Parser, new[]{ "EpochTime", "LogMessage" }, null, null, null, null),
@@ -56,6 +60,17 @@ public static partial class LynxaDeviceMessagesReflection {
   #endregion
 
 }
+#region Enums
+public enum LynxaMessageId {
+  [pbr::OriginalName("DeviceProperty_10_Id")] DeviceProperty10Id = 10,
+  [pbr::OriginalName("GnggaMessage_100_Id")] GnggaMessage100Id = 100,
+  [pbr::OriginalName("LogMessage_101_Id")] LogMessage101Id = 101,
+  [pbr::OriginalName("WifiStationList_102_Id")] WifiStationList102Id = 102,
+  [pbr::OriginalName("ModemParameters_103_Id")] ModemParameters103Id = 103,
+}
+
+#endregion
+
 #region Messages
 public sealed partial class DeviceProperty_10 : pb::IMessage<DeviceProperty_10>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

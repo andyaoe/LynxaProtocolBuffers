@@ -2,6 +2,14 @@ syntax = "proto2";
 
 import "nanopb.proto";
 
+enum LynxaMessageId {
+	DeviceProperty_10_Id = 10;
+	GnggaMessage_100_Id = 100;
+	LogMessage_101_Id = 101;
+	WifiStationList_102_Id = 102;
+	ModemParameters_103_Id = 103;
+}
+
 message DeviceProperty_10
 {
 	enum DevicePropertyName {
