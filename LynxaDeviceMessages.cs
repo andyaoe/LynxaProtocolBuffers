@@ -22,30 +22,30 @@ public static partial class LynxaDeviceMessagesReflection {
   static LynxaDeviceMessagesReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8ikAIK",
+          "ChlMeW54YURldmljZU1lc3NhZ2VzLnByb3RvGgxuYW5vcGIucHJvdG8ipAIK",
           "EURldmljZVByb3BlcnR5XzEwEjMKBHR5cGUYASACKA4yJS5EZXZpY2VQcm9w",
           "ZXJ0eV8xMC5EZXZpY2VQcm9wZXJ0eVR5cGUSMwoEbmFtZRgCIAIoDjIlLkRl",
           "dmljZVByb3BlcnR5XzEwLkRldmljZVByb3BlcnR5TmFtZRIXCghhcmd1bWVu",
-          "dBgDIAIoCUIFkj8CcEAiNAoSRGV2aWNlUHJvcGVydHlOYW1lEg0KCUV4ZWNM",
-          "ZXZlbBAAEg8KC0dwc0ludGVydmFsEAEiQgoSRGV2aWNlUHJvcGVydHlUeXBl",
-          "Eg0KCXVuZGVmaW5lZBAAEgcKA2dldBABEgcKA3NldBACEgsKB2N1cnJlbnQQ",
-          "AyLrAQoQR25nZ2FNZXNzYWdlXzEwMBIRCgllcG9jaFRpbWUYASACKA0SFwoP",
-          "bGF0aXR1ZGVNaW51dGVzGAQgAigCEhcKD2xhdGl0dWRlRGVncmVlcxgFIAIo",
-          "DRIdChVsYXRpdHVkZUNhcmRpbmFsQXNjaWkYBiACKA0SGAoQbG9uZ2l0dWRl",
-          "TWludXRlcxgHIAIoAhIYChBsb25naXR1ZGVEZWdyZWVzGAggAigNEh4KFmxv",
-          "bmdpdHVkZUNhcmRpbmFsQXNjaWkYCSACKA0SHwoXbnVtYmVyT2ZTYXRlbGxp",
-          "dGVzSW5Vc2UYCiACKA0iPwoOTG9nTWVzc2FnZV8xMDESEQoJZXBvY2hUaW1l",
-          "GAEgAigNEhoKCmxvZ01lc3NhZ2UYAiACKAlCBpI/A3CAASI2CgtXaWZpU3Rh",
-          "dGlvbhIZCgVic3NpZBgBIAIoDEIKkj8CCAaSPwJ4ARIMCgRyc3NpGAIgAigF",
-          "InAKE1dpZmlTdGF0aW9uTGlzdF8xMDISEQoJZXBvY2hUaW1lGAEgAigNEhsK",
-          "E251bWJlclN0YXRpb25zRm91bmQYAiACKA0SKQoMd2lmaVN0YXRpb25zGAMg",
-          "AygLMgwuV2lmaVN0YXRpb25CBZI/AhAMImkKE01vZGVtUGFyYW1ldGVyc18x",
-          "MDMSEQoJZXBvY2hUaW1lGAEgAigNEhYKB2NlbGxfaWQYAiACKAlCBZI/AnAI",
-          "EhMKBHBsbW4YAyACKAlCBZI/AnAGEhIKA3RhYxgEIAIoCUIFkj8CcAQqkgEK",
-          "Dkx5bnhhTWVzc2FnZUlkEhgKFERldmljZVByb3BlcnR5XzEwX0lkEAoSFwoT",
-          "R25nZ2FNZXNzYWdlXzEwMF9JZBBkEhUKEUxvZ01lc3NhZ2VfMTAxX0lkEGUS",
-          "GgoWV2lmaVN0YXRpb25MaXN0XzEwMl9JZBBmEhoKFk1vZGVtUGFyYW1ldGVy",
-          "c18xMDNfSWQQZw=="));
+          "dBgDIAIoCUIFkj8CcEAiSAoSRGV2aWNlUHJvcGVydHlOYW1lEg0KCUV4ZWNM",
+          "ZXZlbBAAEg8KC0dwc0ludGVydmFsEAESEgoORW5hYmxlVHJhY2tpbmcQAiJC",
+          "ChJEZXZpY2VQcm9wZXJ0eVR5cGUSDQoJdW5kZWZpbmVkEAASBwoDZ2V0EAES",
+          "BwoDc2V0EAISCwoHY3VycmVudBADIusBChBHbmdnYU1lc3NhZ2VfMTAwEhEK",
+          "CWVwb2NoVGltZRgBIAIoDRIXCg9sYXRpdHVkZU1pbnV0ZXMYBCACKAISFwoP",
+          "bGF0aXR1ZGVEZWdyZWVzGAUgAigNEh0KFWxhdGl0dWRlQ2FyZGluYWxBc2Np",
+          "aRgGIAIoDRIYChBsb25naXR1ZGVNaW51dGVzGAcgAigCEhgKEGxvbmdpdHVk",
+          "ZURlZ3JlZXMYCCACKA0SHgoWbG9uZ2l0dWRlQ2FyZGluYWxBc2NpaRgJIAIo",
+          "DRIfChdudW1iZXJPZlNhdGVsbGl0ZXNJblVzZRgKIAIoDSI/Cg5Mb2dNZXNz",
+          "YWdlXzEwMRIRCgllcG9jaFRpbWUYASACKA0SGgoKbG9nTWVzc2FnZRgCIAIo",
+          "CUIGkj8DcIABIjYKC1dpZmlTdGF0aW9uEhkKBWJzc2lkGAEgAigMQgqSPwII",
+          "BpI/AngBEgwKBHJzc2kYAiACKAUicAoTV2lmaVN0YXRpb25MaXN0XzEwMhIR",
+          "CgllcG9jaFRpbWUYASACKA0SGwoTbnVtYmVyU3RhdGlvbnNGb3VuZBgCIAIo",
+          "DRIpCgx3aWZpU3RhdGlvbnMYAyADKAsyDC5XaWZpU3RhdGlvbkIFkj8CEAwi",
+          "aQoTTW9kZW1QYXJhbWV0ZXJzXzEwMxIRCgllcG9jaFRpbWUYASACKA0SFgoH",
+          "Y2VsbF9pZBgCIAIoCUIFkj8CcAgSEwoEcGxtbhgDIAIoCUIFkj8CcAYSEgoD",
+          "dGFjGAQgAigJQgWSPwJwBCqSAQoOTHlueGFNZXNzYWdlSWQSGAoURGV2aWNl",
+          "UHJvcGVydHlfMTBfSWQQChIXChNHbmdnYU1lc3NhZ2VfMTAwX0lkEGQSFQoR",
+          "TG9nTWVzc2FnZV8xMDFfSWQQZRIaChZXaWZpU3RhdGlvbkxpc3RfMTAyX0lk",
+          "EGYSGgoWTW9kZW1QYXJhbWV0ZXJzXzEwM19JZBBn"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NanopbReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(new[] {typeof(global::LynxaMessageId), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -361,6 +361,7 @@ public sealed partial class DeviceProperty_10 : pb::IMessage<DeviceProperty_10>
     public enum DevicePropertyName {
       [pbr::OriginalName("ExecLevel")] ExecLevel = 0,
       [pbr::OriginalName("GpsInterval")] GpsInterval = 1,
+      [pbr::OriginalName("EnableTracking")] EnableTracking = 2,
     }
 
     public enum DevicePropertyType {

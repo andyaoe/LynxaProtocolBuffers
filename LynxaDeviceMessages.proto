@@ -15,6 +15,7 @@ message DeviceProperty_10
 	enum DevicePropertyName {
 		ExecLevel = 0;
 		GpsInterval = 1;
+		EnableTracking = 2;
 	}
 	enum DevicePropertyType {
 		undefined = 0;

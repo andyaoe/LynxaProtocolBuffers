@@ -20,7 +20,8 @@ typedef enum _LynxaMessageId {
 
 typedef enum _DeviceProperty_10_DevicePropertyName {
     DeviceProperty_10_DevicePropertyName_ExecLevel = 0,
-    DeviceProperty_10_DevicePropertyName_GpsInterval = 1
+    DeviceProperty_10_DevicePropertyName_GpsInterval = 1,
+    DeviceProperty_10_DevicePropertyName_EnableTracking = 2
 } DeviceProperty_10_DevicePropertyName;
 
 typedef enum _DeviceProperty_10_DevicePropertyType {
@@ -79,8 +80,8 @@ typedef struct _WifiStationList_102 {
 #define _LynxaMessageId_ARRAYSIZE ((LynxaMessageId)(LynxaMessageId_ModemParameters_103_Id+1))
 
 #define _DeviceProperty_10_DevicePropertyName_MIN DeviceProperty_10_DevicePropertyName_ExecLevel
-#define _DeviceProperty_10_DevicePropertyName_MAX DeviceProperty_10_DevicePropertyName_GpsInterval
-#define _DeviceProperty_10_DevicePropertyName_ARRAYSIZE ((DeviceProperty_10_DevicePropertyName)(DeviceProperty_10_DevicePropertyName_GpsInterval+1))
+#define _DeviceProperty_10_DevicePropertyName_MAX DeviceProperty_10_DevicePropertyName_EnableTracking
+#define _DeviceProperty_10_DevicePropertyName_ARRAYSIZE ((DeviceProperty_10_DevicePropertyName)(DeviceProperty_10_DevicePropertyName_EnableTracking+1))
 
 #define _DeviceProperty_10_DevicePropertyType_MIN DeviceProperty_10_DevicePropertyType_undefined
 #define _DeviceProperty_10_DevicePropertyType_MAX DeviceProperty_10_DevicePropertyType_current
