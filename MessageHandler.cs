@@ -61,6 +61,12 @@ namespace Lynxa
             //Console.Write($"{value:X} ");
             _packetBuffer[_packetCounter++] = value;
 
+            //check for overflow
+            if (_packetCounter == _packetBuffer.Length)
+            {
+                _parserState = 0xFF;
+            }
+
             switch (_parserState)
             {
                 case 0: //look for the first magic byte '#'
@@ -153,6 +159,9 @@ namespace Lynxa
                         //packet is valid
                         full_packet_received = true;
                     }
+                    reset_state_machine = true;
+                    break;
+                default: //handle error i.e. overflow
                     reset_state_machine = true;
                     break;
             }
