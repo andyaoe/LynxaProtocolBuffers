@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lynxa
 {
-    public class NetworkInfo
+    public class CellTowerInfo
     {
         public int MCC { get; set; }
         public int MNC { get; set; }
@@ -14,14 +14,14 @@ namespace Lynxa
     }
     public static class LynxaDeviceMessageTranslator
     {
-        public static NetworkInfo TranslateModemParameters(ModemParameters_103 modemParameters)
+        public static CellTowerInfo TranslateModemParameters(ModemParameters_103 modemParameters)
         {
-            NetworkInfo network_info = new NetworkInfo();
-            network_info.MCC = int.Parse(modemParameters.Plmn.Substring(0, 3));
-            network_info.MNC = int.Parse(modemParameters.Plmn.Substring(3, 3));
-            network_info.LAC = int.Parse(modemParameters.Tac, System.Globalization.NumberStyles.HexNumber);
+            CellTowerInfo cell_tower_info = new CellTowerInfo();
+            cell_tower_info.MCC = int.Parse(modemParameters.Plmn.Substring(0, 3));
+            cell_tower_info.MNC = int.Parse(modemParameters.Plmn.Substring(3, 3));
+            cell_tower_info.LAC = int.Parse(modemParameters.Tac, System.Globalization.NumberStyles.HexNumber);
 
-            return network_info;
+            return cell_tower_info;
         }
     }
 }
